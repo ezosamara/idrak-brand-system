@@ -1,0 +1,189 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<title>Idrak — Element System · Phase 01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Lato:ital,wght@0,300;0,400;0,700&display=swap">
+<style>
+:root{
+  --c-ink:#0D0D0D;--c-pink:#FF69B4;--c-blue:#4FC3F7;--c-yellow:#F5D03A;
+  --c-orange:#E07840;--c-green:#8BC48A;--c-bg:#FAF8F3;
+  --c-text-soft:rgba(13,13,13,.65);--c-line:rgba(13,13,13,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{background:#e9e6df;font-family:'Cairo',sans-serif;color:var(--c-ink)}
+@page{size:A4 portrait;margin:0}
+.page{
+  width:210mm;height:297mm;background:var(--c-bg);
+  position:relative;overflow:hidden;margin:0 auto;
+  padding:18mm 18mm 22mm;
+}
+
+/* page furniture (DNA §1.4) */
+.run-head{
+  position:absolute;inset-block-start:8mm;inset-inline-start:18mm;
+  font:400 9px/1 'Lato',sans-serif;letter-spacing:3px;text-transform:uppercase;
+  color:var(--c-text-soft);
+}
+.run-head .ar{font-family:'Cairo',sans-serif;letter-spacing:0;font-size:10px;margin-inline-start:8px}
+.sec-chip{
+  position:absolute;inset-block-start:8mm;inset-inline-end:18mm;
+  font:600 10px/1 'Cairo',sans-serif;color:var(--c-ink);
+}
+.sec-chip .num{font:700 10px/1 'Lato',sans-serif;color:var(--c-orange);margin-inline-end:6px;letter-spacing:1px}
+.foot-num{
+  position:absolute;inset-block-end:10mm;inset-inline-start:18mm;
+  font:700 10px/1 'Lato',sans-serif;letter-spacing:3px;color:var(--c-text-soft);
+}
+.foot-num .slash{color:var(--c-line);margin:0 6px}
+.foot-credit{
+  position:absolute;inset-block-end:10mm;inset-inline-end:18mm;
+  font:400 9px/1 'Lato',sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--c-text-soft);
+}
+
+/* title block */
+.title-block{
+  display:flex;flex-direction:column;gap:6px;margin-block-end:10mm;
+  border-block-start:1px solid var(--c-line);padding-block-start:14mm;
+}
+.title-ar{font:900 44px/1 'Cairo',sans-serif;letter-spacing:-.5px}
+.title-en{font:400 11px/1 'Lato',sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--c-text-soft)}
+.title-lede{
+  margin-block-start:10px;max-inline-size:130mm;
+  font:400 13px/1.7 'Cairo',sans-serif;color:var(--c-text-soft);
+}
+
+/* specimen grid 5 cols × 2 rows */
+.grid{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:4mm 4mm;
+  margin-block-start:6mm;
+}
+.cell{
+  background:#fff;border:1px solid var(--c-line);
+  height:48mm;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:6mm 4mm;position:relative;
+}
+.cell .specimen{flex:1;display:flex;align-items:center;justify-content:center;width:100%}
+.cell img,.cell svg{width:22mm;height:22mm;display:block}
+.cell .label-en{font:700 7px/1 'Lato',sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--c-ink);position:absolute;inset-block-start:4mm;inset-inline-start:4mm}
+.cell .label-ar{font:500 11px/1.2 'Cairo',sans-serif;color:var(--c-ink);position:absolute;inset-block-end:3mm;inset-inline-end:4mm}
+.cell .label-num{font:700 8px/1 'Lato',sans-serif;color:var(--c-orange);letter-spacing:1px;position:absolute;inset-block-start:4mm;inset-inline-end:4mm}
+
+.cell.spacer{display:none}
+
+/* legend strip */
+.legend{
+  margin-block-start:10mm;
+  display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;
+  font:400 9px/1.4 'Lato',sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--c-text-soft);
+  border-block-start:1px solid var(--c-line);padding-block-start:8px;
+}
+.legend strong{font-weight:700;color:var(--c-ink);letter-spacing:1.5px}
+.legend .ar{font-family:'Cairo',sans-serif;letter-spacing:0;text-transform:none;font-size:11px}
+.legend .sep{color:var(--c-line)}
+</style>
+</head>
+<body>
+<section class="page" dir="rtl">
+
+  <div class="run-head">Brand Identity Manual<span class="ar">دليل الهوية الإرشادي</span></div>
+  <div class="sec-chip"><span class="num">01</span>العناصر · Element System</div>
+
+  <div class="title-block">
+    <div class="title-en">Phase 01 — Custom Element System</div>
+    <h1 class="title-ar">عـائلـة العنـاصـر</h1>
+    <p class="title-lede">عشرة عناصر بصرية مُصمّمة من الصفر، مستوحاة من البنية الهندسية لشعار «إدراك». شبكة موحّدة 24 وحدة، وزن حدّ ثابت، وزاوية تدوير منضبطة.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="cell">
+      <span class="label-num">01</span>
+      <div class="specimen"><img src="assets/system/sys-01-step.svg" alt=""></div>
+      <span class="label-en">Step</span>
+      <span class="label-ar">السُلَّم</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">02</span>
+      <div class="specimen"><img src="assets/system/sys-02-burst.svg" alt=""></div>
+      <span class="label-en">Burst</span>
+      <span class="label-ar">الإشعاع</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">03</span>
+      <div class="specimen"><img src="assets/system/sys-03-arc.svg" alt=""></div>
+      <span class="label-en">Arc</span>
+      <span class="label-ar">القوس</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">04</span>
+      <div class="specimen"><img src="assets/system/sys-04-chevron.svg" alt=""></div>
+      <span class="label-en">Chevron</span>
+      <span class="label-ar">السهم</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">05</span>
+      <div class="specimen"><img src="assets/system/sys-05-squiggle.svg" alt=""></div>
+      <span class="label-en">Squiggle</span>
+      <span class="label-ar">الموجة</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">06</span>
+      <div class="specimen"><img src="assets/system/sys-06-halfcircle.svg" alt=""></div>
+      <span class="label-en">Half-Circle</span>
+      <span class="label-ar">نصف الدائرة</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">07</span>
+      <div class="specimen"><img src="assets/system/sys-07-triangle.svg" alt=""></div>
+      <span class="label-en">Triangle</span>
+      <span class="label-ar">المثلَّث</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">08</span>
+      <div class="specimen"><img src="assets/system/sys-08-spark.svg" alt=""></div>
+      <span class="label-en">Spark</span>
+      <span class="label-ar">الومضة</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">09</span>
+      <div class="specimen"><img src="assets/system/sys-09-bolt.svg" alt=""></div>
+      <span class="label-en">Bolt</span>
+      <span class="label-ar">البَرق</span>
+    </div>
+
+    <div class="cell">
+      <span class="label-num">10</span>
+      <div class="specimen"><img src="assets/system/sys-10-xmark.svg" alt=""></div>
+      <span class="label-en">X-Mark</span>
+      <span class="label-ar">الإلغاء</span>
+    </div>
+
+    <div class="cell spacer"></div>
+    <div class="cell spacer"></div>
+
+  </div>
+
+  <div class="legend">
+    <strong>24u GRID</strong><span class="sep">·</span><span>192×192 viewBox</span><span class="sep">·</span>
+    <strong>STROKE</strong><span class="sep">·</span><span>6u primary / 3u secondary</span><span class="sep">·</span>
+    <strong>RADIUS</strong><span class="sep">·</span><span>≤1.5u</span><span class="sep">·</span>
+    <span class="ar">مستوحاة من حروف «إدراك»</span>
+  </div>
+
+  <div class="foot-num">01<span class="slash">/</span>SYSTEM</div>
+  <div class="foot-credit">Idrak · Smart Learning Center — Tira</div>
+
+</section>
+</body>
+</html>
