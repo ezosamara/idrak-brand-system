@@ -5523,6 +5523,86 @@
       .cursor-trail {
         display: none !important;
       }
+
+      /* === 21. S02 Brand Story — headline font cap (was missing) === */
+      .st-headline {
+        font-size: clamp(26px, 8vw, 38px) !important;
+        line-height: 1.1 !important;
+        overflow-wrap: break-word !important;
+      }
+      .st-headline-en {
+        font-size: 12px !important;
+        letter-spacing: 2px !important;
+      }
+      .st-beats .st-beat {
+        font-size: 12px !important;
+        padding-inline-start: 12px !important;
+      }
+
+      /* === 22. S06 Typography — spread must stack to single column === */
+      .type-spread {
+        grid-template-columns: 1fr !important;
+        grid-column-gap: 0 !important;
+        gap: 0 !important;
+        padding-block: 32px 16px !important;
+      }
+      .type-divider {
+        display: none !important;
+      }
+      .type-col {
+        gap: 24px !important;
+      }
+      .type-col--cairo .type-row {
+        grid-template-columns: 1fr 64px !important;
+      }
+      .type-row {
+        grid-template-columns: 64px 1fr !important;
+        grid-column-gap: 12px !important;
+      }
+      .type-display {
+        font-size: clamp(36px, 10vw, 52px) !important;
+      }
+      .type-h1 {
+        font-size: clamp(24px, 7vw, 36px) !important;
+      }
+      .type-h2 {
+        font-size: clamp(18px, 5.5vw, 26px) !important;
+      }
+      .type-spec {
+        font-size: 9px !important;
+        white-space: normal !important;
+        letter-spacing: 1.5px !important;
+      }
+
+      /* === 23. S07 Elements master — collapse side-by-side to stacked === */
+      .elements-master {
+        grid-template-columns: 1fr !important;
+        padding: 32px 20px !important;
+        gap: 28px !important;
+      }
+      .elements-master-art {
+        max-width: 180px !important;
+      }
+      .elements-master-name-ar {
+        font-size: clamp(32px, 9vw, 48px) !important;
+      }
+      .element-card {
+        grid-template-rows: 140px auto auto auto auto auto !important;
+      }
+
+      /* === 24. Universal overflow guard for large Arabic display text === */
+      .dna-name-ar,
+      .voices-title-ar,
+      .cs-headline-ar,
+      .anat-headline-ar,
+      .ap-headline-ar,
+      .st-headline,
+      .cl-quote {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        max-width: 100% !important;
+        hyphens: auto !important;
+      }
     }
 
 
