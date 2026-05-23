@@ -4443,229 +4443,6 @@
     }
 
     /* ═══════════════════════════════════════════════
-       SECTION 14 — MOTION DEMO
-    ════════════════════════════════════════════════ */
-    .s-motion {
-      position: relative;
-      min-height: 100vh;
-      background: var(--c-bg);
-      padding: 80px clamp(40px, 6vw, 96px) 64px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    .mo-chrome {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-family: 'Lato', sans-serif;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--c-text-soft);
-      margin-bottom: 24px;
-    }
-    .mo-chrome b { color: var(--c-ink); font-weight: 700; margin-inline-end: 12px; }
-    .mo-chrome-title-ar {
-      font-family: 'Cairo', sans-serif;
-      font-size: 13px;
-      letter-spacing: 0;
-      text-transform: none;
-      margin-inline-start: 16px;
-      color: var(--c-ink);
-      font-weight: 500;
-    }
-
-    .mo-head { max-width: 760px; margin-bottom: 40px; }
-    .mo-eyebrow {
-      font-family: 'Lato', sans-serif;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--c-yellow);
-      margin-bottom: 14px;
-    }
-    .mo-headline-ar {
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      font-size: clamp(40px, 5vw, 64px);
-      line-height: 1.25;
-      color: var(--c-ink);
-      margin: 0 0 10px;
-      text-align: right;
-      overflow-wrap: break-word;
-    }
-    .mo-headline-en {
-      font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      font-size: clamp(18px, 1.6vw, 22px);
-      line-height: 1.4;
-      color: var(--c-text-soft);
-      margin: 0;
-      letter-spacing: 0.5px;
-    }
-
-    .mo-grid {
-      flex: 1;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 1px;
-      grid-row-gap: 1px;
-      background: var(--c-line);
-    }
-    .mo-card {
-      background: var(--c-bg);
-      display: flex;
-      flex-direction: column;
-      min-height: 320px;
-    }
-    .mo-stage {
-      flex: 1;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      min-height: 240px;
-      overflow: hidden;
-    }
-    .mo-meta {
-      padding: 18px 24px 20px;
-      background: var(--c-bg);
-      border-top: 1px solid var(--c-line);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      align-items: end;
-    }
-    .mo-num {
-      font-family: 'Lato', sans-serif;
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--c-text-soft);
-      margin-bottom: 6px;
-    }
-    .mo-name-ar {
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--c-ink);
-      margin: 0;
-      text-align: right;
-      unicode-bidi: isolate;
-    }
-    .mo-name-en {
-      font-family: 'Lato', sans-serif;
-      font-weight: 400;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--c-text-soft);
-      margin: 2px 0 0;
-    }
-    .mo-spec {
-      text-align: end;
-      font-family: 'Lato', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--c-text-soft);
-      line-height: 1.5;
-      white-space: nowrap;
-    }
-    .mo-spec b { color: var(--c-ink); font-weight: 700; display: block; font-size: 12px; }
-
-    /* ── 01 REVEAL — clip-path inset loop on the actual logo SVG ── */
-    .mo-reveal-logo {
-      width: clamp(180px, 22vw, 280px);
-      height: auto;
-      display: block;
-      clip-path: inset(100% 0 0 0);
-    }
-    body.live .mo-reveal-logo {
-      animation: mo-reveal-loop 3.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-    }
-    @keyframes mo-reveal-loop {
-      0%   { clip-path: inset(100% 0 0 0); }
-      30%  { clip-path: inset(0 0 0 0); }
-      80%  { clip-path: inset(0 0 0 0); }
-      100% { clip-path: inset(100% 0 0 0); }
-    }
-
-    /* ── 02 RISE — translateY + opacity loop ── */
-    .mo-rise-el {
-      width: 96px;
-      height: auto;
-      opacity: 0;
-      transform: translateY(48px);
-    }
-    body.live .mo-rise-el {
-      animation: mo-rise-loop 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-    }
-    @keyframes mo-rise-loop {
-      0%   { opacity: 0; transform: translateY(48px); }
-      40%  { opacity: 1; transform: translateY(0); }
-      75%  { opacity: 1; transform: translateY(0); }
-      100% { opacity: 0; transform: translateY(-12px); }
-    }
-
-    /* ── 03 DRAW — stroke-dashoffset loop ── */
-    .mo-draw-svg { width: 140px; height: 140px; }
-    .mo-draw-path {
-      fill: none;
-      stroke: var(--c-yellow);
-      stroke-width: 6;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-dasharray: 400;
-      stroke-dashoffset: 400;
-    }
-    body.live .mo-draw-path {
-      animation: mo-draw-loop 3.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-    }
-    @keyframes mo-draw-loop {
-      0%   { stroke-dashoffset: 400; }
-      40%  { stroke-dashoffset: 0; }
-      75%  { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: -400; }
-    }
-
-    /* ── 04 LOOP — gentle scale + breath ── */
-    .mo-loop-el {
-      width: 120px;
-      height: auto;
-      transform: scale(1);
-    }
-    body.live .mo-loop-el {
-      animation: mo-loop-breath 3.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-    }
-    @keyframes mo-loop-breath {
-      0%, 100% { transform: scale(1) rotate(0deg); }
-      50%      { transform: scale(1.08) rotate(-3deg); }
-    }
-
-    .mo-foot {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-top: 32px;
-      margin-top: 32px;
-      border-top: 1px solid var(--c-line);
-      font-family: 'Lato', sans-serif;
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--c-text-soft);
-    }
-    .mo-foot b { color: var(--c-ink); font-weight: 700; margin-inline-end: 12px; }
-    .mo-foot-warn { color: var(--c-ink); font-weight: 700; }
-
-    @media (max-width: 900px) {
-      .mo-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ═══════════════════════════════════════════════
        SECTION 15 — CLOSING (the moment)
     ════════════════════════════════════════════════ */
     .s-closing {
@@ -5087,8 +4864,7 @@
     ═══════════════════════════════════════════════ */
     .st-chrome, .type-chrome, .elements-chrome, .logo-var-chrome,
     .anat-chrome, .cs-chrome, .bg-chrome, .ms-chrome, .ap-chrome,
-    .mo-chrome, .cl-chrome, .voices-header, .colour-chrome,
-    .hero-chrome {
+    .cl-chrome, .voices-header, .colour-chrome {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
@@ -5113,11 +4889,9 @@
     .bg-chrome > span:first-child,
     .ms-chrome > span:first-child,
     .ap-chrome > span:first-child,
-    .mo-chrome > span:first-child,
     .cl-chrome > span:first-child,
     .voices-header > span:first-child,
-    .colour-chrome > span:first-child,
-    .hero-chrome > span:first-child {
+    .colour-chrome > span:first-child {
       display: inline-flex;
       align-items: baseline;
       gap: 16px;
@@ -5129,8 +4903,7 @@
     }
     .st-chrome b, .type-chrome b, .elements-chrome b, .logo-var-chrome b,
     .anat-chrome b, .cs-chrome b, .bg-chrome b, .ms-chrome b, .ap-chrome b,
-    .mo-chrome b, .cl-chrome b, .voices-header b, .colour-chrome b,
-    .hero-chrome b {
+    .cl-chrome b, .voices-header b, .colour-chrome b {
       color: var(--c-ink);
       font-weight: 700;
       letter-spacing: 4px;
@@ -5140,7 +4913,7 @@
     .st-chrome-title-ar, .type-chrome-title-ar, .elements-chrome-title-ar,
     .logo-var-chrome-title-ar, .anat-chrome-title-ar, .cs-chrome-title-ar,
     .bg-chrome-title-ar, .ms-chrome-title-ar, .ap-chrome-title-ar,
-    .mo-chrome-title-ar, .cl-chrome-title-ar, .voices-title-ar,
+    .cl-chrome-title-ar, .voices-title-ar,
     .colour-chrome-section-ar {
       font-family: 'Cairo', sans-serif;
       font-size: 13px;
@@ -5162,11 +4935,9 @@
     .bg-chrome > span:last-child,
     .ms-chrome > span:last-child,
     .ap-chrome > span:last-child,
-    .mo-chrome > span:last-child,
     .cl-chrome > span:last-child,
     .voices-header > span:last-child,
-    .colour-chrome > span:last-child,
-    .hero-chrome > span:last-child {
+    .colour-chrome > span:last-child {
       direction: ltr;
       unicode-bidi: isolate;
       font-family: 'Lato', sans-serif;
@@ -5292,8 +5063,7 @@
       .ms-headline-en,
       .ap-headline-en,
       .anat-headline-en,
-      .cs-headline-en,
-      .mo-headline-en {
+      .cs-headline-en {
         font-size: 14px !important;
         line-height: 1.5 !important;
       }
@@ -5668,6 +5438,25 @@
         max-width: 100% !important;
         hyphens: auto !important;
       }
+
+      /* === Nav mobile === */
+      .top-nav { padding: 0 20px; height: 52px; }
+      .top-nav-subtitle { display: none; }
+      .top-nav-current { display: none; }
+      .top-nav-panel {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 16px 16px 24px;
+        top: 52px;
+        gap: 4px;
+      }
+      .top-nav-section-link { padding: 12px 14px; gap: 4px; }
+      .top-nav-section-name { font-size: 10px; letter-spacing: 1px; }
+      .top-nav-section-ar { font-size: 11px; }
+      body { padding-top: 52px; }
+
+      /* === Brand film mobile === */
+      .ap-film { aspect-ratio: 16 / 9; }
+      .ap-film-label { bottom: 16px; inset-inline-start: 20px; }
     }
 
 
@@ -5828,21 +5617,6 @@
     }
     /* Push sections below the fixed nav */
     body { padding-top: 56px; }
-    @media (max-width: 600px) {
-      .top-nav { padding: 0 20px; height: 52px; }
-      .top-nav-subtitle { display: none; }
-      .top-nav-current { display: none; }
-      .top-nav-panel {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 16px 16px 24px;
-        top: 52px;
-        gap: 4px;
-      }
-      .top-nav-section-link { padding: 12px 14px; gap: 4px; }
-      .top-nav-section-name { font-size: 10px; letter-spacing: 1px; }
-      .top-nav-section-ar { font-size: 11px; }
-      body { padding-top: 52px; }
-    }
 
     /* ══════════════════════════════════════════
        BRAND FILM — video panel in S13
@@ -5880,10 +5654,6 @@
       font-weight: 500;
       letter-spacing: 0;
       margin-block-end: 4px;
-    }
-    @media (max-width: 600px) {
-      .ap-film { aspect-ratio: 16 / 9; }
-      .ap-film-label { bottom: 16px; inset-inline-start: 20px; }
     }
 
   </style>
@@ -8800,44 +8570,6 @@
           duration: 0.5,
           stagger: 0.1,
           delay: 1.6,
-          scrollTrigger: trigger
-        });
-      }
-    }
-
-
-    /* ── Section 14: Motion Demo — chrome RISE + cards stagger (CSS loops handle the rest) ── */
-    {
-      const moSection = document.querySelector('.s-motion');
-      if (moSection) {
-        const trigger = {
-          trigger: moSection,
-          start: 'top 70%',
-          toggleActions: 'play none none reverse'
-        };
-
-        gsap.from(moSection.querySelectorAll('.mo-chrome > *, .mo-eyebrow, .mo-headline-ar, .mo-headline-en'), {
-          opacity: 0, y: -8,
-          duration: 0.55,
-          stagger: 0.08,
-          ease: 'power3.out',
-          scrollTrigger: trigger
-        });
-
-        gsap.from(moSection.querySelectorAll('.mo-card'), {
-          opacity: 0, y: 28,
-          duration: 0.65,
-          stagger: 0.12,
-          ease: 'power3.out',
-          delay: 0.3,
-          scrollTrigger: trigger
-        });
-
-        gsap.from(moSection.querySelectorAll('.mo-foot > *'), {
-          opacity: 0, y: 8,
-          duration: 0.5,
-          stagger: 0.1,
-          delay: 1.2,
           scrollTrigger: trigger
         });
       }
