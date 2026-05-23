@@ -5,3 +5,5 @@ screenshot-*.png
 .claude/
 qa/
 incoming/
+
+.vercel

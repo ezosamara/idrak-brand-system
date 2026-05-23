@@ -1569,16 +1569,17 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      max-height: 240px;
-      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
       border-radius: 4px;
+      overflow: hidden;
     }
     .dso-illus-row img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 4 / 3;
       object-fit: cover;
       display: block;
-      mix-blend-mode: multiply;
     }
 
     .dso-foot {
@@ -3999,6 +4000,47 @@
       direction: rtl;
     }
 
+    /* ─── S13 brand photography triptych ────────────────────────── */
+    .ap-photo-band {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr 1fr;
+      gap: 2px;
+      margin-top: 2px;
+      background: var(--c-line);
+    }
+    .ap-photo-cell {
+      position: relative;
+      overflow: hidden;
+      background: var(--c-ink);
+    }
+    .ap-photo-cell img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s var(--ease-out);
+      opacity: 0.92;
+    }
+    .ap-photo-cell:nth-child(2) img {
+      aspect-ratio: 2 / 3;
+    }
+    .ap-photo-cell:hover img { transform: scale(1.03); opacity: 1; }
+    .ap-photo-cell-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 32px 20px 16px;
+      background: linear-gradient(to top, rgba(13,13,13,0.55) 0%, transparent 100%);
+      font-family: 'Lato', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #fff;
+      direction: ltr;
+    }
+
     /* ─── S13 encounters (photo-based, Tarek's reframe) ─────────
        Replaces flat ap-hero/ap-story/ap-card-spec/ap-letter mockups.
        Each scene is a real-feeling photographic still with logo composited
@@ -4673,8 +4715,8 @@
       font-family: 'Cairo', sans-serif;
       font-weight: 900;
       font-size: clamp(56px, 9vw, 144px);
-      line-height: 0.95;
-      letter-spacing: -2px;
+      line-height: 1.15;
+      letter-spacing: -1px;
       color: var(--c-ink);
       margin: 0;
       text-align: right;
@@ -4821,6 +4863,37 @@
     }
     .cl-foot b { font-weight: 700; margin-inline-end: 12px; opacity: 1; }
     .cl-foot-end { font-weight: 700; }
+
+    .cl-studio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+      margin-top: 16px;
+      border-top: 1px solid rgba(13,13,13,0.12);
+      font-family: 'Lato', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--c-ink);
+      opacity: 0.55;
+      position: relative;
+      z-index: 2;
+      gap: 10px;
+    }
+    .cl-studio strong {
+      opacity: 1;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+    .cl-studio-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--c-ink);
+      opacity: 0.4;
+      display: inline-block;
+    }
 
     @media (max-width: 900px) {
       .cl-contact { grid-template-columns: repeat(2, 1fr); }
@@ -5442,7 +5515,7 @@
       .mo-stage { padding: 24px !important; }
 
       /* === 18. S15 Closing === */
-      .cl-quote { font-size: clamp(28px, 9vw, 44px) !important; line-height: 1.3 !important; }
+      .cl-quote { font-size: clamp(28px, 9vw, 44px) !important; line-height: 1.35 !important; }
       .cl-subtitle { font-size: 13px !important; }
       .cl-signature { font-size: 12px !important; }
 
@@ -5808,7 +5881,7 @@
     <div class="dna-system-overview" aria-labelledby="dso-heading">
 
       <header class="dso-chrome">
-        <span class="dso-chrome-en"><b>Brand DNA</b>The System · Index</span>
+        <span class="dso-chrome-en"><b>Brand DNA</b> · The System · Index</span>
         <span class="dso-chrome-ar">النظام · الفهرس</span>
       </header>
 
@@ -5940,9 +6013,11 @@
         </div>
       </div>
 
-      <!-- Elements in context — system diagram from brand assets -->
-      <figure class="dso-illus-row" aria-label="Brand elements system diagram">
-        <img src="assets/media/nanno-elements-system.jpg" alt="">
+      <!-- Brand in context — three-image photography strip -->
+      <figure class="dso-illus-row" aria-label="إدراك brand photography">
+        <img src="assets/media/idrak-new-01.jpg" alt="">
+        <img src="assets/media/idrak-new-02.jpg" alt="">
+        <img src="assets/media/idrak-new-03.jpg" alt="">
       </figure>
 
       <footer class="dso-foot">
@@ -6258,21 +6333,6 @@
       <span class="elements-chrome-counter" dir="ltr">07 / 15</span>
     </header>
 
-    <!-- S07 master element intro — the burst is the brand signature -->
-    <div class="elements-master">
-      <div class="elements-master-art">
-        <img src="assets/element-rays-burst.svg" alt="">
-      </div>
-      <div class="elements-master-text">
-        <p class="elements-master-eyebrow">العلامة المرجعية · Brand Signature</p>
-        <p class="elements-master-name-ar">الانطلاقة</p>
-        <p class="elements-master-name-en">The Burst</p>
-        <p class="elements-master-desc">العنصر الجامع. خمسة ألوان، خمس قيم، إشعاع واحد. يظهر في رأس الشعار ويُعرِّف الهوية في لحظة واحدة.</p>
-        <p class="elements-master-desc-en" dir="ltr">The unifying mark. Five colours, five values, one radiance. Lives at the top of the logo and identifies the brand in a single moment.</p>
-        <span class="elements-master-file">element-rays-burst.svg</span>
-      </div>
-    </div>
-
     <div class="elements-grid">
 
       <!-- Card 1: اللحظة — yellow bolt -->
@@ -6469,6 +6529,21 @@
       </section>
 
     </div><!-- /ui-icons -->
+
+    <!-- S07 signature — the burst unifies all 5 elements into one mark -->
+    <div class="elements-master">
+      <div class="elements-master-art">
+        <img src="assets/element-rays-burst.svg" alt="">
+      </div>
+      <div class="elements-master-text">
+        <p class="elements-master-eyebrow">العلامة المرجعية · Brand Signature</p>
+        <p class="elements-master-name-ar">الانطلاقة</p>
+        <p class="elements-master-name-en">The Burst</p>
+        <p class="elements-master-desc">العنصر الجامع. خمسة ألوان، خمس قيم، إشعاع واحد. يظهر في رأس الشعار ويُعرِّف الهوية في لحظة واحدة.</p>
+        <p class="elements-master-desc-en" dir="ltr">The unifying mark. Five colours, five values, one radiance. Lives at the top of the logo and identifies the brand in a single moment.</p>
+        <span class="elements-master-file">element-rays-burst.svg</span>
+      </div>
+    </div>
 
     <footer class="elements-foot">
       <span><b>Vocabulary</b>5 elements &middot; 15 icons &middot; one ruleset</span>
@@ -7034,6 +7109,22 @@
       </figure>
     </div>
 
+    <!-- Brand photography — three editorial stills -->
+    <div class="ap-photo-band" aria-label="إدراك brand photography">
+      <div class="ap-photo-cell">
+        <img src="assets/media/idrak-new-01.jpg" alt="">
+        <span class="ap-photo-cell-label">The Student</span>
+      </div>
+      <div class="ap-photo-cell">
+        <img src="assets/media/idrak-new-02.jpg" alt="">
+        <span class="ap-photo-cell-label">The Moment of إدراك</span>
+      </div>
+      <div class="ap-photo-cell">
+        <img src="assets/media/idrak-new-03.jpg" alt="">
+        <span class="ap-photo-cell-label">The Journey</span>
+      </div>
+    </div>
+
     <footer class="ap-foot">
       <span><b>One discipline</b>Three logo variants &middot; four artifacts &middot; one system</span>
       <span class="ap-foot-warn">٤ تطبيقات &middot; Four artifacts</span>
@@ -7196,6 +7287,14 @@
       <span><b>End</b>إدراك &middot; Smart Learning Center &middot; Tira</span>
       <span class="cl-foot-end">15 / 15 &middot; نهاية</span>
     </footer>
+
+    <div class="cl-studio" dir="ltr">
+      <span>Brand identity work by</span>
+      <span class="cl-studio-dot"></span>
+      <strong>Ezo Studio</strong>
+      <span class="cl-studio-dot"></span>
+      <span>2026</span>
+    </div>
 
   </section>
 
