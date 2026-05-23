@@ -139,16 +139,18 @@
 
     /* ── Brand element layers — Raya's original drawings, story-tied ── */
 
-    /* Layer A (back, z=-120): BLUE SEMICIRCLE — clarity, the dome of answer */
+    /* Layer A (back, z=-120): BLUE SEMICIRCLE — moved to left side, away from logo */
     .hero-el-dome {
       position: absolute;
-      top: -200px;
-      right: 6%;
-      width: 640px;
-      height: 640px;
-      transform: translateZ(-120px) rotate(-8deg);
+      top: -60px;
+      left: -80px;
+      right: auto;
+      width: 500px;
+      height: 500px;
+      transform: translateZ(-120px) rotate(12deg);
       pointer-events: none;
       will-change: transform, opacity, clip-path;
+      opacity: 0.7;
     }
     .hero-el-dome img { width: 100%; height: 100%; display: block; }
 
@@ -191,31 +193,23 @@
     }
     .hero-el-arrows img { width: 100%; height: 100%; display: block; }
 
-    /* Punctum (z=+40): ORANGE SPARK — ignition near the wordmark */
+    /* Punctum (z=+40): ORANGE SPARK — moved to bottom-left, away from logo */
     .hero-el-spark {
       position: absolute;
-      top: calc(50% - 260px);
-      right: calc(4% + 2%);
-      width: 280px;
-      height: 280px;
-      transform: translateZ(40px) rotate(-6deg);
+      bottom: 80px;
+      left: 6%;
+      top: auto;
+      right: auto;
+      width: 240px;
+      height: 240px;
+      transform: translateZ(40px) rotate(10deg);
       pointer-events: none;
       will-change: transform, opacity, scale;
     }
     .hero-el-spark img { width: 100%; height: 100%; display: block; }
 
-    /* PRIMARY BRAND MARK (z=+60): BURST — the signature element, above all layers */
-    .hero-el-burst {
-      position: absolute;
-      top: calc(50% - 320px);
-      right: 18%;
-      width: 360px;
-      height: 360px;
-      transform: translateZ(60px) rotate(-8deg);
-      pointer-events: none;
-      will-change: transform, opacity;
-    }
-    .hero-el-burst img { width: 100%; height: 100%; display: block; }
+    /* BURST hidden — burst rays already live inside logo-with-rays.svg */
+    .hero-el-burst { display: none; }
 
     /* ── Depth layer 3 (front): LOGO SVG — the brand entering ── */
     .hero-logo {
@@ -797,6 +791,8 @@
     .dna-pillar {
       min-height: 100vh;
       position: relative;
+      z-index: 2;
+      background: var(--c-bg);
       padding: 80px 64px;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -5532,6 +5528,181 @@
       }
     }
 
+
+    /* ══════════════════════════════════════════
+       TOP NAVBAR
+    ══════════════════════════════════════════ */
+    .top-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9100;
+      height: 52px;
+      background: rgba(250,248,243,0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--c-line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      font-family: 'Lato', sans-serif;
+    }
+    .top-nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .top-nav-logo {
+      height: 22px;
+      width: auto;
+      display: block;
+    }
+    .top-nav-subtitle {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--c-text-soft);
+    }
+    .top-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .top-nav-current {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--c-text-soft);
+      transition: color 0.3s;
+    }
+    .top-nav-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: flex-end;
+    }
+    .top-nav-toggle span {
+      display: block;
+      height: 1.5px;
+      background: var(--c-ink);
+      transition: width 0.3s, opacity 0.3s, transform 0.3s;
+    }
+    .top-nav-toggle span:nth-child(1) { width: 22px; }
+    .top-nav-toggle span:nth-child(2) { width: 14px; }
+    .top-nav-toggle span:nth-child(3) { width: 22px; }
+    .top-nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); width: 22px; }
+    .top-nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .top-nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); width: 22px; }
+
+    /* Full-screen nav panel */
+    .top-nav-panel {
+      position: fixed;
+      top: 52px; left: 0; right: 0;
+      background: var(--c-bg);
+      border-bottom: 1px solid var(--c-line);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      z-index: 9050;
+    }
+    .top-nav-panel.is-open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    .top-nav-section-link {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px 20px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .top-nav-section-link:hover { border-color: var(--c-line); }
+    .top-nav-section-link.is-active { border-color: var(--c-ink); }
+    .top-nav-section-num {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--c-text-soft);
+    }
+    .top-nav-section-name {
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--c-ink);
+      font-weight: 700;
+    }
+    .top-nav-section-ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--c-text-soft);
+      text-align: right;
+    }
+    /* Push sections below the fixed nav */
+    body { padding-top: 52px; }
+    @media (max-width: 600px) {
+      .top-nav { padding: 0 20px; height: 48px; }
+      .top-nav-subtitle { display: none; }
+      .top-nav-current { display: none; }
+      .top-nav-panel { grid-template-columns: repeat(2, 1fr); padding: 20px; top: 48px; }
+      body { padding-top: 48px; }
+    }
+
+    /* ══════════════════════════════════════════
+       BRAND FILM — video panel in S13
+    ══════════════════════════════════════════ */
+    .ap-film {
+      position: relative;
+      width: 100%;
+      background: var(--c-ink);
+      overflow: hidden;
+      aspect-ratio: 16 / 7;
+      margin-block: 2px;
+    }
+    .ap-film video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.85;
+    }
+    .ap-film-label {
+      position: absolute;
+      inset-inline-start: 48px;
+      bottom: 32px;
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--c-bg);
+      opacity: 0.7;
+    }
+    .ap-film-label-ar {
+      display: block;
+      font-family: 'Cairo', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-block-end: 4px;
+    }
+    @media (max-width: 600px) {
+      .ap-film { aspect-ratio: 16 / 9; }
+      .ap-film-label { bottom: 16px; inset-inline-start: 20px; }
+    }
+
   </style>
 </head>
 
@@ -5540,6 +5711,39 @@
   <div class="cursor"     id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
   <canvas class="cursor-trail" id="cursorTrail" aria-hidden="true"></canvas>
+
+  <!-- ── Top Navbar ── -->
+  <nav class="top-nav" id="topNav" dir="ltr">
+    <div class="top-nav-brand">
+      <img src="assets/logo-wordmark.svg" alt="إدراك" class="top-nav-logo">
+      <span class="top-nav-subtitle">Brand Book &middot; 2026</span>
+    </div>
+    <div class="top-nav-right">
+      <span class="top-nav-current" id="navCurrent">01 &middot; Cover</span>
+      <button class="top-nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Nav panel (opens on toggle) -->
+  <div class="top-nav-panel" id="navPanel" dir="ltr">
+    <a class="top-nav-section-link is-active" href="#s01" data-target="s01"><span class="top-nav-section-num">01</span><span class="top-nav-section-name">Cover</span><span class="top-nav-section-ar">الغلاف</span></a>
+    <a class="top-nav-section-link" href="#s02" data-target="s02"><span class="top-nav-section-num">02</span><span class="top-nav-section-name">Brand Story</span><span class="top-nav-section-ar">القصة</span></a>
+    <a class="top-nav-section-link" href="#s03" data-target="s03"><span class="top-nav-section-num">03</span><span class="top-nav-section-name">Brand DNA</span><span class="top-nav-section-ar">حمض الهوية</span></a>
+    <a class="top-nav-section-link" href="#s04" data-target="s04"><span class="top-nav-section-num">04</span><span class="top-nav-section-name">Two Voices</span><span class="top-nav-section-ar">صوتان</span></a>
+    <a class="top-nav-section-link" href="#s05" data-target="s05"><span class="top-nav-section-num">05</span><span class="top-nav-section-name">Colour System</span><span class="top-nav-section-ar">النظام اللوني</span></a>
+    <a class="top-nav-section-link" href="#s06" data-target="s06"><span class="top-nav-section-num">06</span><span class="top-nav-section-name">Typography</span><span class="top-nav-section-ar">الطباعة</span></a>
+    <a class="top-nav-section-link" href="#s07" data-target="s07"><span class="top-nav-section-num">07</span><span class="top-nav-section-name">Elements</span><span class="top-nav-section-ar">العناصر</span></a>
+    <a class="top-nav-section-link" href="#s08" data-target="s08"><span class="top-nav-section-num">08</span><span class="top-nav-section-name">Logo Variations</span><span class="top-nav-section-ar">صيغ الشعار</span></a>
+    <a class="top-nav-section-link" href="#s09" data-target="s09"><span class="top-nav-section-num">09</span><span class="top-nav-section-name">Logo Anatomy</span><span class="top-nav-section-ar">تشريح الشعار</span></a>
+    <a class="top-nav-section-link" href="#s10" data-target="s10"><span class="top-nav-section-num">10</span><span class="top-nav-section-name">Clear Space</span><span class="top-nav-section-ar">المساحة الآمنة</span></a>
+    <a class="top-nav-section-link" href="#s11" data-target="s11"><span class="top-nav-section-num">11</span><span class="top-nav-section-name">Backgrounds</span><span class="top-nav-section-ar">الخلفيات</span></a>
+    <a class="top-nav-section-link" href="#s12" data-target="s12"><span class="top-nav-section-num">12</span><span class="top-nav-section-name">Misuse</span><span class="top-nav-section-ar">الاستخدام الخاطئ</span></a>
+    <a class="top-nav-section-link" href="#s13" data-target="s13"><span class="top-nav-section-num">13</span><span class="top-nav-section-name">Applications</span><span class="top-nav-section-ar">التطبيقات</span></a>
+    <a class="top-nav-section-link" href="#s14" data-target="s14"><span class="top-nav-section-num">14</span><span class="top-nav-section-name">Motion Demo</span><span class="top-nav-section-ar">الحركة</span></a>
+    <a class="top-nav-section-link" href="#s15" data-target="s15"><span class="top-nav-section-num">15</span><span class="top-nav-section-name">Closing</span><span class="top-nav-section-ar">الخاتمة</span></a>
+  </div>
 
   <!-- Intro curtain: covers everything until the choreography starts.
        Lifted by JS once the GSAP timeline is queued. Hidden for revisits. -->
@@ -7121,6 +7325,17 @@
       <div class="ap-photo-cell">
         <img src="assets/media/idrak-new-03.jpg" alt="">
         <span class="ap-photo-cell-label">The Journey</span>
+      </div>
+    </div>
+
+    <!-- Brand Film — full-bleed video panel -->
+    <div class="ap-film" aria-label="Brand film">
+      <video autoplay muted loop playsinline>
+        <source src="assets/media/brand-video-new.mp4" type="video/mp4">
+      </video>
+      <div class="ap-film-label">
+        <span class="ap-film-label-ar">فيلم الهوية</span>
+        Brand Film &middot; إدراك 2026
       </div>
     </div>
 
@@ -8794,6 +9009,56 @@
     } else {
       // Screenshot or reduced motion: render at final state
       document.querySelectorAll('.reveal-rtl').forEach(el => el.classList.add('is-revealed'));
+    }
+
+    /* ── Top Navbar JS ── */
+    {
+      const toggle  = document.getElementById('navToggle');
+      const panel   = document.getElementById('navPanel');
+      const current = document.getElementById('navCurrent');
+      const links   = document.querySelectorAll('.top-nav-section-link[data-target]');
+      const sections = Array.from(links).map(l => document.getElementById(l.dataset.target)).filter(Boolean);
+
+      toggle && toggle.addEventListener('click', () => {
+        const open = panel.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+
+      panel && panel.addEventListener('click', e => {
+        const link = e.target.closest('.top-nav-section-link');
+        if (link) {
+          panel.classList.remove('is-open');
+          toggle && toggle.setAttribute('aria-expanded', 'false');
+          e.preventDefault();
+          document.getElementById(link.dataset.target)?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      document.addEventListener('click', e => {
+        if (panel && panel.classList.contains('is-open') &&
+            !panel.contains(e.target) && e.target !== toggle) {
+          panel.classList.remove('is-open');
+          toggle && toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      const sectionNames = {
+        s01:'01 · Cover', s02:'02 · Brand Story', s03:'03 · Brand DNA',
+        s04:'04 · Two Voices', s05:'05 · Colour System', s06:'06 · Typography',
+        s07:'07 · Elements', s08:'08 · Logo Variations', s09:'09 · Logo Anatomy',
+        s10:'10 · Clear Space', s11:'11 · Backgrounds', s12:'12 · Misuse',
+        s13:'13 · Applications', s14:'14 · Motion Demo', s15:'15 · Closing'
+      };
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            links.forEach(l => l.classList.toggle('is-active', l.dataset.target === e.target.id));
+            if (current) current.textContent = sectionNames[e.target.id] || '';
+          }
+        });
+      }, { threshold: 0.3 });
+      sections.forEach(s => io.observe(s));
     }
 
   </script>

@@ -29,19 +29,21 @@ One section per prompt. Screenshot → verify → gate → next. No bundling.
 | 18 | Copy rewrite — integrate copywriter's revised `COPY.md` | ✅ DONE — batch 2 complete. All 31 deltas applied: S02 beats 2–4 + foot; S03 dna-desc × 5 (Lato/LTR → Cairo/RTL); S04 voice-extra-ar × 2 added; S05 colour-story × 6 (Lato/LTR → Cairo/RTL); S06 Cairo H1; S09/S10/S12/S13/S14 `-en` headlines → Arabic with Cairo style; S11 bg-rule-ar + bg-headline-en/bg-rule-en → Arabic; S13 letterhead body; S14 mo-headline-ar; S15 cl-quote (8 spans → 6) + cl-sig-thanks-en → Arabic. |
 | 19a | **Award-tier cinematic upgrade** — cursor, S03 vision, S15 stillness, S13 encounters | ✅ DONE (Session 4) |
 | 19b | Element relevance + line-spacing audit (post-copy) | ✅ DONE (all §3b pairings correct; `.st-beat` 1.95, `.voice-quote-ar` 1.85, `.type-body` 1.85, `.art-lh-para` 1.9 — all long Arabic body text ≥ 1.85) |
-| 20a | **Phase 19 — Brand-New ammunition** (15-icon construction set, الحرف letterform sub-spread in S06, brand-system overview as S03 Act 3, dead `.ap-hero/.ap-story/.ap-card-spec/.ap-letter` CSS removal) | ✅ DONE (Session 5) |
+| 20a | **Phase 19 — Brand-New ammunition** (15-icon construction set, brand-system overview as S03 Act 3, dead `.ap-hero/.ap-story/.ap-card-spec/.ap-letter` CSS removal) | ✅ DONE (Session 5) |
 | 22 | **Session 6 — Award-eve emergency fixes** (S06 letterform spread DELETED — Cairo isn't the logo font; S13 photo-encounters → flat designed stationery using all 3 logo variants; S07 element-derived icons → 20-icon Service & UI library; S05 colour story copy verified; brand-palette cursor trail added) | ✅ DONE (Session 6, pre-submission) |
-| 23 | **Session 7 — Post-submission polish** (S01 hero reverted A1 per user preference; S03 Act 2 — 5 DIFFERENTIATED pillar compositions (single-col centered / diagonal-thrust / rhythm-band / centered-with-ring / asymmetric-with-tick-ladder), resolves "one move repeated 5 times" knock; S03 Act 3 — system overview promoted to Vignelli-grade poster scale (120px ghost numerals, 88px Cairo 800 declarations, 280px label column); §13b Rules 17-19 codified) | ✅ DONE (Session 7) |
-| 24 | **Session 8 — Mobile responsive sweep + Nano Banana prompt brief** (single `@media (max-width: 600px)` block at end of `<style>`; phone-specific hero composition with all 5 elements + logo scaled; chrome stacks 2-line; S07/S09/S11/S13 grid + label fixes; overflow-x guard; NANO-BANANA-PROMPTS.md authored with D1 still-life + D2 editorial-comic illustration + #5 cinematic illustrated hero; cultural framing PERMANENTLY banned per Session 4 + Session 8 user lock; CLAUDE.md §3f auto-invoke triggers locked; CLAUDE.md §13b Rule 20 mobile-sweep lessons codified) | ✅ DONE (Session 8) |
+| 23 | **Session 7 — Post-submission polish** (S01 hero reverted A1 per user preference; S03 Act 2 — 5 DIFFERENTIATED pillar compositions; S03 Act 3 — system overview promoted to Vignelli-grade poster scale; §13b Rules 17-19 codified) | ✅ DONE (Session 7) |
+| 24 | **Session 8 — Mobile responsive sweep + Nano Banana prompt brief** (single `@media (max-width: 600px)` block at end of `<style>`; phone-specific hero; chrome stacks 2-line; S07/S09/S11/S13 grid + label fixes; overflow-x guard; NANO-BANANA-PROMPTS.md authored; cultural framing PERMANENTLY banned; CLAUDE.md §3f auto-invoke triggers locked; CLAUDE.md §13b Rule 20 mobile-sweep lessons codified) | ✅ DONE (Session 8) |
 | 25 | Latin-paragraphs-in-RTL `dir="ltr"` HTML sweep (S04 / S11 / S13 / S15 — wraps Latin paragraphs to prevent bidi reorder at narrow widths per §13b Rule 12) | ✅ DONE (7 elements updated: S04 voice-name-en × 2 + voice-quote-en × 2, S11 bg-headline-en + bg-rule-en, S15 cl-sig-thanks-en) |
-| 26 | Nano Banana 2 media generation + composite (D1 5× still-life, D2 5× illustration, #5 cinematic hero — blocked on user-generated images) | ⏸ BLOCKED ON USER |
-| 27 | PDF export | later — separate phase |
+| 26 | **Session 9 — Burst restoration + cursor + hero + media integrations** (burst reinstated as primary brand signature mark; cursor switched from yellow bolt to `element-rays-burst.svg` 28×28px; hero burst floating layer added; S02 burst punctum; S07 `elements-master` block moved to end as culmination; S13 business cards → actual SVG files `card-front.svg` + `card-back.svg`; S13 nanno illustration band with 5 nanno media assets; section chrome cleanup — `NN` numeric prefix removed from all 15 section titles; GitHub repo initialised + Vercel deploy live) | ✅ DONE (Session 9) |
+| 27 | **Session 9 (cont.) — DSO fixes + Act 3 triptych + S13 photo band + S15 polish** (DSO band label scale fixed: 120px ghost numerals → 10px editorial counter, 88px Arabic → clamp(28px,3vw,40px), label column 200px; Act 3 chrome separator fixed from `Brand DNAThe System · Index` → `Brand DNA · The System · Index`; Act 3 bottom illustration → 3-image triptych using `idrak-new-01/02/03.jpg`; S07 burst block confirmed at END of section; S13 brand photography triptych band `ap-photo-band` added (3 editorial stills, 1/1.6/1 asymmetric grid, dark overlay + LTR labels); S15 `cl-quote` line-height fixed from 0.95 → 1.15; Ezo Studio credit `.cl-studio` added at foot of S15; §13b Rule 21 codified) | ✅ DONE (Session 9) |
+| 28 | Nano Banana 2 media generation + composite (D1 5× still-life, D2 5× illustration, #5 cinematic hero — partially delivered; 3 editorial brand photos idrak-new-01/02/03.jpg integrated in Session 9) | ⏸ PARTIALLY DONE — nanno illustration series integrated; D1/D2/#5/E series still blocked on user image generation |
+| 29 | PDF export | later — separate phase |
 
 ---
 
 ## CURRENT PHASE — POLISH
 
-All 15 sections built. Surgical polish ongoing.
+All 15 sections built and deployed at `https://idrak-brand-system.vercel.app`. Surgical polish ongoing.
 
 ### Polish completed (session 1)
 
@@ -80,76 +82,78 @@ All 15 sections built. Surgical polish ongoing.
 Target: **Awwwards Site of the Year** primary + **Brand New Awards** world-class secondary.
 Think-tank panel (Bierut / Anton Repponen / Spiekermann / Tarek Atrissi / Villeneuve) converged on four moves landed in a 2-hour scope.
 
-- ✅ **Custom brand-actor cursor** — yellow bolt 14×26px (inline SVG data-URI, fill `--c-yellow`) + halo ring with 12% lerp. Bolt lerps at 35% so it lags behind the mouse like a real object with mass. Brightens (`filter: drop-shadow + brightness`) near `a, button, [data-cursor=hot], summary, label[for], .nav-dot`. Hides on Arabic display headlines (`.st-headline, .cl-quote, .type-display, .type-h1, .type-h2, .dna-pillar-name, .hero-display, .ms-headline-ar, .cs-title-ar`) so type carries those moments uninterrupted. Touch devices get the auto cursor back. `prefers-reduced-motion` simplifies transitions.
-- ✅ **S03 Act 1 — The Convergence** (new pinned cinematic scene, the Awwwards screen-record moment). Five vertical colour bars rise from the floor (staggered from edges-in), five elements (bolt/spark/arrows/dome/stairs) draw in above them with Arabic labels (اللحظة · الاندفاع · الطاقة · الوضوح · النمو), then converge toward physical centre as the logo SVG fades in as the unified mark with tagline "خمس قيم — هوية واحدة · Five values · one identity." ScrollTrigger pin + scrub 0.7, 140% scroll length. The existing 5 pillar scenes follow as **Act 2** (educational breakdown). Convergence math uses `getBoundingClientRect()` for the per-element distance to viewport centre — bulletproof against RTL flex reversal.
-- ✅ **S15 stillness reveal** (Villeneuve's patience). Mic-drop quote split into 8 word-spans (`.cl-w`), revealing one-at-a-time with 0.55s stagger + blur-removal, ~5s total. Then **a 4-second silence** before the English subtitle, signature logo, and contact band emerge. The longest single beat in the book. Follows §13b Rule 11: words are default-visible in HTML, GSAP `from()` adds the entry as decoration. English subtitle gets `dir="ltr"` (§13b Rule 12 — fixes the trailing-period bidi flip).
-- ✅ **S13 reframe — Applications → Encounters** (Tarek's reframe). Replaced the four flat mockups (campaign banner / IG story / business card / letterhead) with four photographic still-life "encounters." Each scene uses `background-image: url('assets/media/s13-0N.jpg')` so missing-image fallback is just cream (no broken-image icon). Logo composited as CSS-positioned `<img>` overlay on top of the blank paper in each photo — keeps the brand mark pixel-sharp and swappable. Yellow bolt punctum (`::after` data-URI) in the top-physical-left corner of each scene. Caption pills at bottom-physical-right (RTL leading edge). User-generated photos via Nano Banana 2 prompts (still-life, no people, business-grade editorial — Erik's discipline applied to Tarek's reframe).
+- ✅ **Custom brand-actor cursor** — yellow bolt 14×26px (inline SVG data-URI, fill `--c-yellow`) + halo ring with 12% lerp. Bolt lerps at 35% so it lags behind the mouse like a real object with mass. Brightens (`filter: drop-shadow + brightness`) near `a, button, [data-cursor=hot], summary, label[for], .nav-dot`. Hides on Arabic display headlines. Touch devices get the auto cursor back.
+- ✅ **S03 Act 1 — The Convergence** (new pinned cinematic scene). Five vertical colour bars rise from the floor, five elements draw in above them with Arabic labels, then converge toward physical centre as `element-rays-burst.svg` fades in as the unified crown mark with tagline "خمس قيم — هوية واحدة · Five values · one identity." ScrollTrigger pin + scrub 0.7, 140% scroll length.
+- ✅ **S15 stillness reveal** (Villeneuve's patience). Mic-drop quote split into 8 word-spans (`.cl-w`), revealing one-at-a-time with 0.55s stagger + blur-removal, ~5s total. Then **a 4-second silence** before the English subtitle, signature logo, and contact band emerge.
+- ✅ **S13 reframe — Applications → Encounters** (Tarek's reframe). Replaced flat mockups with four photographic still-life "encounters." Each scene uses `background-image: url('assets/media/s13-0N.webp')`. Logo composited as CSS-positioned `<img>` overlay.
 
-**Session 4 post-build wrap-up** (after the 4 builds):
-- ✅ **Images extracted from chat transcript.** User uploaded the 5 Nano-Banana WebPs inline in chat (not to disk). Wrote `qa/extract-images.ps1` — reads the tail of the session JSONL, regex-matches `"type":"image","source":{"type":"base64",…}`, writes the last N images to `assets/media/`. Output format: WebP (Nano Banana native), so HTML was switched from `.jpg` → `.webp` via a single targeted `replace_all` on the four S13 background-image URLs. **The technique is locked in CLAUDE.md §13c** under "Image extraction from chat (Session 4 trick)" — reusable.
-- ✅ **Image order corrected.** Nano Banana uploads don't preserve order in the transcript; the brochure (the intended hero) extracted as slot 5, not 1. Renamed via PowerShell shuffle to put brochure → s13-01, desk → s13-02, card → s13-03, letterhead → s13-04, alt letter → s13-05.
-- ✅ **Brochure logo composite repositioned.** First render put the logo on the LEFT page of the open spread — wrong reading direction. Flipped `inset-inline-end: 24%` → `inset-inline-start: 26%` so it sits on the right page (Arabic reading direction). Locked as CLAUDE.md §13b rule 14 step 5.
+**Session 4 post-build wrap-up:**
+- ✅ **Images extracted from chat transcript.** Wrote `qa/extract-images.ps1`. Technique locked in CLAUDE.md §13c.
+- ✅ **Image order corrected.** Brochure → s13-01, desk → s13-02, card → s13-03, letterhead → s13-04, alt letter → s13-05.
+- ✅ **Brochure logo composite repositioned.** Flipped `inset-inline-end: 24%` → `inset-inline-start: 26%` so it sits on the right page (Arabic reading direction). Locked as CLAUDE.md §13b rule 14 step 5.
 - ✅ **All four docs updated** (CLAUDE.md / DNA.md / PHASES.md / `qa/extract-images.ps1`) capturing this session's locks before compact.
-
-**What was DEFERRED to next session** (out of 2-hour scope):
-- 15-icon construction system (Brand-New-quality work — 3–4 hrs of design + integration)
-- الحرف letterform sub-spread in S06 (embed inside S06 — do NOT break the 15-section frame)
-- Motion video loops in hero / S03 / S15 (still-image discipline this round)
-- Brand-system overview spread (needs icons + letterform first)
-- Cleanup: orphaned `.ap-hero / .ap-story / .ap-card-spec / .ap-letter` CSS rules in `index.html` (S13 no longer uses them; remove in Phase 19 housekeeping)
-
-**No user action required.** The 5 images are saved in `assets/media/`. Hard-reload (Ctrl+Shift+R) the index.html and the upgrade is live.
 
 ### Session 5 — Phase 19 Brand-New ammunition (this session)
 
-Target: **Brand New Awards** secondary win (the system-pedagogy pages are where this jury scores). Parallel research → serial implementation pattern (user-chosen): three sub-agents proposed integration locations + composition, then implementation landed in sequence with screenshot gates per §11.
-
-**A · Dead-CSS cleanup** ✅
-337 lines of orphaned `.ap-hero / .ap-story / .ap-card-spec / .ap-letter` selectors (Session 4 had switched S13 to `.ap-scene` photo-composite but left the old CSS as dead code). Verified zero HTML references via grep before removal. Replaced with single marker comment.
-
-**B · S06 letterform sub-spread** ✅
-الحرف · The Letterform — embedded as third row strip below the existing two-column type spread, above the type-foot. 5 Cairo 900 letters (إ د ر ا ك in reading order, RTL flow) each carrying a `--h` CSS variable for `transform: scaleY()` per the **anatomically-correct letter-to-height map** (إ=78% · ا=70% · ك=62% · ر=52% · د=35%) — a Phase 19 disclosure addendum locked in DNA.md §3.1 to override the array-order assumption that contradicted letterform reality. Green stair element overlaid at 18% opacity as bottom-center construction-reveal watermark (small, atmospheric — not competing). Percentage tick row beneath the letters + bilingual museum-card caption ("Cairo's إدراك, measured. Type generates the system."). RISE on letters (stagger 80ms) + DRAW on stair watermark on delay. Counter stays `06 / 15`. Section grows past 100vh.
-
-**C · 15-icon construction system as S07 Act 2** ✅
-The Brand-New jury hook. 5 families × 3 inline-SVG icons each, single-stroke 3u-secondary on 24u artboard. Each icon visually derives from its parent element-*.svg silhouette. Names locked: stairs/growth (الخطوة step / المسار path / الإنجاز milestone), arrows/energy (المتابعة next / الإرسال submit / المحاولة retry), bolt/moment (التنبيه alert / السرعة quick / **الإدراك insight ★ money shot**), dome/clarity (الإجابة answer / الحماية safe-space / التركيز focus), spark/drive (الفكرة idea / الانطلاق ignite / الاتصال contact). Per-row layout (RTL): 3 icons flowing physical right-to-left + family label cell at row-end carrying parent element thumbnail + colored inline-start rule (= inner edge facing the icons in RTL) + bilingual name + story. Construction-grid dot backdrop (8% ink) behind each icon-art. Money-shot bolt insight icon = polyline `(18,4) → (10,11) → (15,13) → (6,21)` — the brand-thesis kick at the middle vertex. Per-stroke DRAW via `stroke-dasharray` computed by JS `getTotalLength()`, then GSAP animates `stroke-dashoffset → 0` (0.9s, 180ms inter-cell stagger). Filled dots fade in last. Family label RISE last per row. S07 now 2-act, counter stays `07 / 15`.
-
-**D · Brand-system overview as S03 Act 3** ✅
-Vignelli-style index poster appended as the third act of S03. Per §13b Rule 16 multi-act pattern. Five horizontal bands stacked on a master baseline grid:
-1. **اللون · COLOUR** — 5 colour chips with hex + Arabic story-word (اللحظة · الاندفاع · الطاقة · الوضوح · النمو) + English caption + colored rule
-2. **العنصر · ELEMENT** — 5 parent `element-*.svg` thumbs aligned column-for-column to the colour band above
-3. **الأيقونة · ICON · 15** — 5 cells each carrying 3 micro-icons (28×28), grouped by colour family
-4. **الخط · TYPE** — 2-column split: "إدراك" Cairo 900 right / "Idrak" Lato 700 left
-5. **الحركة · MOTION** — 4 cells: REVEAL (yellow box clip-path), RISE (pink box translate), DRAW (blue polyline stroke-dash), EASING (cubic-bezier curve SVG)
-
-Each band has a label cell on physical-LEFT (band number 01/05–05/05 + Arabic name + English name) and a 5-cell body grid. Column alignment between Bands 1-2-3 (colour → element → icon, same 5-column rhythm) is the Awwwards screen-record beat — the brand declaring "look how aligned we are." Sequential REVEAL stack via GSAP `from()` (180ms stagger, opacity + y:24, ~1.4s total assembly). Per §13b Rule 11: bands default-visible, motion adds entry decoration only. Counter stays `03 / 15` — S03 now three acts under one section number.
-
-**Session 5 infrastructure additions:**
-- ✅ **`?act=N` URL flag** added to screenshot-mode bypass — hides everything in S03 except the requested act (1=CONVERGE, 2=pillars, 3=overview) so headless can isolate any single act. Useful for S03 verification because `?only=s03` blows .dna-vision to 100vh = window-height in tall captures. Now `?screenshot=true&only=s03&act=3` cleanly captures just the system overview.
-- ✅ **DNA.md §3.1 letter-to-height map locked** — anatomically correct mapping (إ=78 · ا=70 · ك=62 · ر=52 · د=35) overrides the array-index assumption. One-line addendum explains the disclosure rationale.
+- ✅ **Dead-CSS cleanup** — 337 lines of orphaned `.ap-hero / .ap-story / .ap-card-spec / .ap-letter` selectors removed.
+- ✅ **S06 letterform sub-spread** — الحرف · The Letterform strip embedded below the two-column type spread. 5 Cairo 900 letters (إ د ر ا ك) with `--h` CSS variable for `transform: scaleY()` per the anatomically-correct letter-to-height map (إ=78% · ا=70% · ك=62% · ر=52% · د=35%). Green stair element overlaid at 18% opacity. RISE on letters + DRAW on stair watermark.
+- ✅ **15-icon construction system as S07 Act 2** — 5 families × 3 inline-SVG icons each, single-stroke 3u-secondary on 24u artboard. Each icon visually derives from its parent element silhouette. Per-icon DRAW via `stroke-dasharray` + GSAP.
+- ✅ **Brand-system overview as S03 Act 3** — Vignelli-style index poster. Five horizontal bands (COLOUR / ELEMENT / ICON / TYPE / MOTION) with sequential REVEAL stack.
+- ✅ **`?act=N` URL flag** added for S03 isolated headless capture.
+- ✅ **DNA.md §3.1 letter-to-height map locked.**
 - ✅ **All 3 docs updated** (CLAUDE.md §12 / DNA.md §5 / PHASES.md status table) before compact.
 
-**What was DEFERRED again** (still out of session scope):
-- Motion video loops in hero / S03 / S15 (still-image discipline)
-- Mobile responsive sweep (Phase 20b backlog)
-- PDF export (Phase 21)
+### Session 6 — Award-eve emergency fixes (this session)
 
-### Upcoming — Phase 18 batch 2 (next session)
+- ✅ **S06 letterform sub-spread DELETED** — Cairo isn't the logo font; the spread claimed otherwise (§3 violation + §13b Rule 18 violation). Specimen spread stands alone.
+- ✅ **S13 photo-encounters → flat designed stationery** using all 3 logo variants (letterhead / business card front + back / social post).
+- ✅ **S07 element-derived icons → 20-icon Service & UI library** — BUSINESS-tied icons (services / audience / UI utility), single-stroke 24×24 viewBox.
+- ✅ **S05 colour story copy verified.** Brand-palette cursor trail added.
 
-**Remaining copy-rewrite work** (when copywriter returns next batch)
-1. Decide on long-Arabic-replacing-short-chip cases (S10 legend, S11 rule card) — needs layout pass
-2. Decide on S03–S07 Arabic-only descriptions (new draft removes English; conflicts with "keep English" rule)
-3. Surgical replace in `index.html` — touch nothing else
-4. Re-screenshot every affected section
-5. Verify: display headlines don't overflow narrow columns, Arabic line-spacing ≥ 1.85, RTL anchoring intact, 🔒 LOCKED Raya phrases unchanged
+### Session 7 — Post-submission polish (this session)
 
-### Backlog after copy
+- ✅ **S01 hero reverted** to A1 per user preference.
+- ✅ **S03 Act 2 — 5 DIFFERENTIATED pillar compositions** (single-col centered / diagonal-thrust / rhythm-band / centered-with-ring / asymmetric-with-tick-ladder). Resolves "one move repeated 5 times" knock.
+- ✅ **S03 Act 3 — system overview promoted** to Vignelli-grade poster scale.
+- ✅ **§13b Rules 17-19 codified.**
 
-1. **Element relevance audit** — verify every section's brand element matches its color story per §3b pairings
-2. **Mobile responsive sweep** — 375 and 768 breakpoints
-3. **Extend `.reveal-rtl` to remaining Arabic display strings** (S03 pillar names, S04 voice names, S05 colour names, S06 type specimen, S15 mic-drop)
-4. **Optional motion picks from "ideas list"** — cursor as brand actor, flip counter, colour-mood snap transitions, S03 horizontal camera track, magnetic elements, answer-dot heartbeat
-5. **Performance pass** — Lighthouse + bundle audit
-6. **PDF export** — final phase, separate setup
+### Session 8 — Mobile responsive sweep + Nano Banana prompt brief (this session)
+
+- ✅ **Single `@media (max-width: 600px)` block** at end of `<style>`. Phone-specific hero composition with all 5 elements + logo scaled. Chrome stacks 2-line. S07/S09/S11/S13 grid + label fixes. `overflow-x` guard.
+- ✅ **NANO-BANANA-PROMPTS.md authored** with D1 still-life × 5, D2 editorial-comic illustration × 5, #5 cinematic illustrated hero × 1, Series E social banners × 5.
+- ✅ **Cultural framing PERMANENTLY banned** per Session 4 + Session 8 user lock.
+- ✅ **CLAUDE.md §3f auto-invoke triggers locked. §13b Rule 20 codified.**
+
+### Session 9 — Burst restoration, cursor, hero, S02, S07, S13 SVG cards + nanno media, chrome cleanup, deploy (Phase 26)
+
+- ✅ **Burst element reinstated as primary brand signature mark** — `element-rays-burst.svg` completely un-banned. 5 colored rays (one per pillar/colour). Every prior "BANNED" reference to this element removed from CLAUDE.md. §3b updated.
+- ✅ **Cursor switched to burst** — cursor now uses `element-rays-burst.svg` as `background-image` at 28×28px. Replaces the yellow bolt inline SVG data-URI.
+- ✅ **Hero burst floating layer** — `element-rays-burst.svg` added as hero floating element alongside the 5 brand elements.
+- ✅ **S02 burst punctum** — `element-rays-burst.svg` replaces the bolt as the S02 LEFT column punctum figure.
+- ✅ **S07 `elements-master` block moved to END** — burst/signature panel repositioned from before the 5 element cards to after the icon library, before the footer. Reads as a culmination: 5 elements → icons → the unifying burst.
+- ✅ **S13 business cards → actual SVG files** — `assets/card-front.svg` + `assets/card-back.svg` (Raya's final designed card). Replaces the old HTML-coded CSS mockup.
+- ✅ **S13 nanno illustration band** — 5-cell row with `nanno-student-desk.png`, `nanno-notebook-writing.jpg`, `nanno-boy-window.png`, `nanno-father-son.png`, `nanno-parent-girl.png`.
+- ✅ **Section chrome cleanup** — `NN` numeric prefix removed from all 15 section chrome titles. Chrome separator `·` is sufficient; the counter `NN / 15` is always present on the right.
+- ✅ **GitHub repo initialised** at `https://github.com/ezosamara/idrak-brand-system`.
+- ✅ **Vercel deploy live** at `https://idrak-brand-system.vercel.app`. Auto-deploys on push to `master`.
+
+### Session 9 (cont.) — DSO fixes, Act 3 triptych, S13 photo band, S15 polish (Phase 27)
+
+- ✅ **DSO band label scale fixed** — the "120px ghost numerals / 88px Cairo 800 declarations / 280px label column" was a bug that destroyed the index grid, not the intended design. Corrected to: band number 10px / letter-spacing 3px / opacity 0.4, Arabic name clamp(28px,3vw,40px), label column 200px. CLAUDE.md §13b Rule 21 codified.
+- ✅ **Act 3 chrome separator fixed** — was rendering `Brand DNAThe System · Index` (missing separator before "The System"). Now: `Brand DNA · The System · Index`.
+- ✅ **Act 3 bottom illustration → 3-image triptych** — single cropped image replaced with a 3-column grid of `idrak-new-01.jpg`, `idrak-new-02.jpg`, `idrak-new-03.jpg`.
+- ✅ **S13 brand photography triptych band** (`ap-photo-band`) — new 3-column asymmetric grid (1 / 1.6 / 1) using the 3 new editorial stills with dark gradient overlay and LTR labels.
+- ✅ **S15 `cl-quote` line-height fixed** — from `0.95` (lines colliding) to `1.15` (legible multi-line Arabic).
+- ✅ **Ezo Studio credit** (`.cl-studio`) added at foot of S15: `Brand identity work by · EZO STUDIO · 2026` — 10px / 3px letter-spacing / uppercase / centered / 55% opacity.
+
+---
+
+## Upcoming — next sessions
+
+1. **Nano Banana 2 media** — D1 × 5 still-life, D2 × 5 editorial-comic illustration, #5 cinematic hero, Series E × 5 social banners (blocked on user-generated images; prompts ready in NANO-BANANA-PROMPTS.md)
+2. **Performance pass** — Lighthouse + bundle audit, before any PDF work
+3. **PDF export** — final phase, separate setup
+4. **Extended copy rewrite batch** — when copywriter returns next batch
 
 ---
 
@@ -176,6 +180,7 @@ Each band has a label cell on physical-LEFT (band number 01/05–05/05 + Arabic 
 ## Absolute Rules (every phase)
 - Logo: always `<img>` — never traced, never recreated
 - Elements: only `assets/element-*.svg` (Raya's originals) — `sys-*` deprecated
+- Burst (`element-rays-burst.svg`): primary brand signature — NEVER banned, used in hero/cursor/S02/S07/S03 Act 1
 - Colours: only `:root` tokens — no hard-coded hex
 - Fonts: Cairo + Lato only
 - Motion: all gated to `body.live`

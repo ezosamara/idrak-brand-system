@@ -66,18 +66,18 @@ Source geometry: إدراك letterform profile. Redrawn forms inspired by `incom
 
 ### 3.2 Element family (10 pieces — locked in `assets/system/`)
 1. **STEP** — staircase, echoes إ-د-ر-ا-ك letter heights. Meaning: the learning journey.
-2. **BURST** — 6 rays, 12° spread, all 5 colours. Meaning: the إدراك moment, discovery.
+2. **BURST** — 5 rays, one per pillar, all 5 brand colours. **The primary brand signature mark.** Meaning: the إدراك moment — the unification of all five values into one form. It is the only element that legitimately uses all five colours simultaneously, because it IS the brand system made visible. Appears at the top of `logo-with-rays.svg`, as the custom cursor, as the hero floating element, as the S02 punctum figure, as the S07 culminating panel, and as the S03 Act 1 convergence crown.
 3. **ARC** — quarter-arc, 6u stroke. Meaning: the turn toward clarity.
 4. **CHEVRON** — triple RTL chevron. Meaning: direction, forward motion.
 5. **SQUIGGLE** — 3-period sine. Meaning: the irregular path, neurodiversity.
 6. **HALF-CIRCLE** — solid filled. Meaning: the answer, completeness.
 7. **TRIANGLE** — equilateral outline. Meaning: foundation, three pillars.
 8. **SPARK** — 4-way cross. Meaning: the moment of contact, ignition.
-9. **BOLT** — angular zigzag. Meaning: energy, the fast learner.
+9. **BOLT** — angular zigzag. Meaning: energy, the fast learner. Pillar 1 element (اللحظة / yellow). Appears as S15 background silhouette.
 10. **X-MARK** — thick crossed strokes. Meaning: prohibition (Misuse section only).
 
 ### 3.3 Colour assignment
-- ≤1 brand colour per element (BURST: all 5).
+- ≤1 brand colour per element (BURST exception: all 5, one per ray).
 - Match element to its section's dominant colour (see CLAUDE.md §6).
 
 ### 3.4 Motion language
@@ -95,9 +95,9 @@ All gated to `body.live`. Easing throughout: `cubic-bezier(0.16, 1, 0.3, 1)`.
 | PUNCTUM | yellow spark stamps via IntersectionObserver | 1.4s, single-shot | Every section's RTL leading edge on first entry |
 | CURTAIN | full-bleed cream overlay → opacity 0 | 0.5s | Holds the page until Grand Opening starts (first visit only) |
 | LANDED | scaleX(0)→1 on a 64px hairline under logo | 0.8s | Final beat of the entrance — "brand has arrived" |
-| CONVERGE | ScrollTrigger pin + scrub 0.7, 140% scroll length; bars grow + elements appear + converge to viewport-centre + logo crown fades in | scroll-driven | S03 Act 1 only — the Awwwards screen-record beat. Per-element `x` distance computed via `getBoundingClientRect()` to viewport centre so it works regardless of RTL flex reversal. |
+| CONVERGE | ScrollTrigger pin + scrub 0.7, 140% scroll length; bars grow + elements appear + converge to viewport-centre + burst crown fades in | scroll-driven | S03 Act 1 only — the Awwwards screen-record beat. Per-element `x` distance computed via `getBoundingClientRect()` to viewport centre so it works regardless of RTL flex reversal. |
 | STILLNESS | word-spans (`.cl-w`) opacity+y+blur stagger 0.55s, then deliberate 4-second hold before downstream elements emerge | ~10s total | S15 closing only. Villeneuve's counter to high-motion sections. Words default-visible (§13b rule 11), GSAP `from()` adds entry as decoration. |
-| CURSOR-BOLT | yellow bolt SVG (data-URI fill `#F5D03A`) + halo ring lerp-following at 35% / 12%; brightens via filter on `a, button, [data-cursor=hot]`; hides on Arabic display headlines | continuous | Every page. The brand actor on the canvas. Touch-device fallback (`@media (hover:none)`) restores auto cursor. |
+| CURSOR-BURST | `element-rays-burst.svg` as CSS `background-image` at 28×28px + halo ring lerp-following at 35% / 12%; brightens via filter on `a, button, [data-cursor=hot]`; hides on Arabic display headlines (`.st-headline, .cl-quote, .type-display, .type-h1, .type-h2, .dna-pillar-name, .hero-display, .ms-headline-ar, .cs-title-ar`) so type carries those moments uninterrupted. Touch-device fallback (`@media (hover:none)`) restores auto cursor. | continuous | Every page. The brand actor on the canvas — the signature mark following the user's hand. |
 
 Hover: 4px lift (`translateY(-4px)`), 0.2s ease. Never scale. Never rotate.
 
@@ -122,8 +122,9 @@ Western motion conventions clip from the bottom or fade from below. Arabic displ
 - ❌ Centered-stack hero layouts (template look)
 - ❌ Tashkeel on Arabic body
 - ❌ Raw drop-in of `incoming/*.svg`
-- ❌ All 5 colours on one section
+- ❌ All 5 colours on one section (burst is the sole exception — it IS the system)
 - ❌ `#FFFFFF` anywhere — use `--c-bg` or `--c-bg-dark`
+- ❌ Banning `element-rays-burst.svg` — it is the primary brand signature mark, never an anti-pattern
 
 ---
 
@@ -131,18 +132,18 @@ Western motion conventions clip from the bottom or fade from below. Arabic displ
 
 | # | Section | SBF analogue | Motion primitive | DNA notes |
 |---|---|---|---|---|
-| 01 | Hero | p1 | REVEAL + LOOP | Dark, logo draws, display REVEALS massive |
-| 02 | Brand Story | — | REVEAL + RISE | Two-column scene. LEFT: bolt punctum + caption. RIGHT: mission headline (clip-path REVEAL) + flowing narrative beats (staggered RISE). SCRUB primitive was tried (500vh pin) but readability suffered — replaced with the consistent REVEAL+RISE pattern used across the book. |
-| 03 | Brand DNA | p4 | **CONVERGE (Act 1)** + DRAW + RISE (Act 2) + INDEX-REVEAL (Act 3) | Three-act section (Phase 19 added Act 3). Act 1 = pinned cinematic CONVERGE — five colour bars rise + elements converge to centre + logo crown emerges (Awwwards screen-record moment). Act 2 = five pillar breakdowns. **Act 3 — Vignelli-style system overview**: five horizontal bands (COLOUR / ELEMENT / ICON / TYPE / MOTION) stacked on a master baseline grid. Sequential REVEAL stack with 180ms stagger. Column alignment between Bands 1-2-3 proves the §3b colour-element-icon spine in one glance. The "system poster" beat — counterweight to Act 1's cinema, Act 2's pedagogy. |
+| 01 | Hero | p1 | REVEAL + LOOP | Cream, logo draws, display REVEALS massive. `logo-with-rays.svg` is the RTL protagonist. `element-rays-burst.svg` is the hero floating element. Brand video (`nanno-brand-video.mp4`) as background at 0.08 opacity, `mix-blend-mode: multiply`. |
+| 02 | Brand Story | — | REVEAL + RISE | Two-column scene. LEFT: `element-rays-burst.svg` as punctum figure + "اللحظة · The moment" caption. RIGHT: eyebrow + mission headline (clip-path REVEAL) + flowing narrative beats (staggered RISE). SCRUB primitive was tried (500vh pin) but readability suffered — replaced with the consistent REVEAL+RISE pattern used across the book. |
+| 03 | Brand DNA | p4 | **CONVERGE (Act 1)** + DRAW + RISE (Act 2) + INDEX-REVEAL (Act 3) | Three-act section. **Act 1** = pinned cinematic CONVERGE — five colour bars rise + elements converge to centre + `element-rays-burst.svg` crown emerges (Awwwards screen-record moment). **Act 2** = five DIFFERENTIATED pillar breakdowns (CLAUDE.md §13b Rule 17). **Act 3 — Vignelli-style editorial index**: five horizontal bands (COLOUR / ELEMENT / ICON / TYPE / MOTION). Band label is editorial-counter style — band number at 10px / letter-spacing 3px / opacity 0.4; Arabic band name at clamp(28px,3vw,40px); label column 200px. This is a quiet index, not a display-type poster — the "120px ghost numeral / 88px Cairo 800" era was a bug, now fixed (CLAUDE.md §13b Rule 21). Act 3 bottom carries a 3-image triptych (`idrak-new-01/02/03.jpg`). Chrome reads `Brand DNA · The System · Index`. |
 | 04 | Two Voices | p10 | PARALLAX | Arabic right / English left, colour-split |
 | 05 | Colour System | p9 | full-viewport wash | Scroll through each colour as a scene |
 | 06 | Typography | p10 | REVEAL + DRAW (Phase 19) | Two-act. Act 1 = bilingual specimen spread. Act 2 = الحرف letterform sub-spread showing how إ-د-ر-ا-ك letterforms generate the stair element's 5 heights (anatomical map: إ=78 · ا=70 · ك=62 · ر=52 · د=35, locked §3.1). Cairo 900 letters on shared baseline + green stair watermark + percentage ticks + bilingual museum-card caption. RISE on letters + DRAW on stair. |
-| 07 | Elements | — | DRAW + STROKE-DASH (Phase 19) | Two-act. Act 1 = existing 5-card grid showing the parent elements. Act 2 = 15-icon construction system (5 families × 3 icons each, single-stroke 3u on 24u artboard, each icon derived from its parent element's silhouette). Per-row layout: 3 icons + family label cell on RTL trailing edge. Per-icon DRAW via `stroke-dasharray` + GSAP. Money-shot icon = #7 الإدراك (bolt) — DRAW timing encodes the brand thesis. |
+| 07 | Elements | — | DRAW + STROKE-DASH + RISE | **Act 1** = 5-card grid showing the parent elements. **Act 2** = 20-icon Service & UI library (Session 6): 3 functional groups (Services / Audience & Contact / UI Utility), single-stroke 24×24 viewBox. **`elements-master` burst/signature block** is at the END of S07 — after the icons, before the footer. Reads as culmination: five sub-elements → their derived icons → the unifying burst. Placement is intentional and locked. |
 | 08 | Logo Variations | p3 | RISE | 3-up grid, dark/light/colour versions |
 | 09 | Logo Anatomy | p4 | DRAW | Callout lines draw in |
 | 10 | Clear Space | p5 | REVEAL | x-height diagram reveals |
 | 11 | Logo on Backgrounds | p7 | RISE | Grid: ink/cream/each colour |
 | 12 | Logo Misuse | p8 | REVEAL | X-marks stamp over wrong versions |
-| 13 | Applications → **Encounters** | p13 | RISE + clipPath REVEAL on hero | Photographic still-life scenes (`assets/media/s13-0N.webp`) as `background-image` on `.ap-scene` + logo SVG composited as absolute `<img>` overlay on blank paper. No flat mockups. Yellow bolt punctum `::after` data-URI top-physical-left. Captions bottom-physical-right (RTL leading). Session-4 reframe per Tarek. |
+| 13 | Applications | p13 | RISE + clipPath REVEAL | **Business cards**: `assets/card-front.svg` + `assets/card-back.svg` (Raya's actual designed SVG cards). **Nanno illustration band** (5-cell): `nanno-student-desk.png`, `nanno-notebook-writing.jpg`, `nanno-boy-window.png`, `nanno-father-son.png`, `nanno-parent-girl.png`. **Brand photography triptych band** (`ap-photo-band`): 3-column asymmetric grid (1 / 1.6 / 1) with `idrak-new-01/02/03.jpg`, dark gradient overlay, LTR labels. S13 stationery photographic still-life scenes (`assets/media/s13-0N.webp`) also present for letterhead context. |
 | 14 | Motion Demo | — | LOOP | Live animation specimens |
-| 15 | Closing | p14 | **STILLNESS** (Session 4) | Mic-drop word-span reveal + 4-second silence + late signature/contact stagger. Patience as design decision — counter-balances S03's maximalism. The cursor steps aside on `.cl-quote` so the type carries this beat. |
+| 15 | Closing | p14 | **STILLNESS** (Session 4) | Yellow takeover. Mic-drop word-span reveal + 4-second silence + late signature/contact stagger. The cursor (`.cursor-burst`) steps aside on `.cl-quote` so the type carries this beat. **`cl-quote` line-height: 1.15** (was 0.95 — Arabic lines collided; fixed Session 9). **Ezo Studio credit** (`.cl-studio`) at the very bottom: `Brand identity work by · EZO STUDIO · 2026` — 10px / 3px letter-spacing / uppercase / centered / 55% opacity. |

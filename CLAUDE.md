@@ -34,8 +34,9 @@ Companion docs: `DNA.md` (grammar) · `PHASES.md` (roadmap)
   | `--c-blue` | `element-semicircle-blue.svg` | Clarity, the dome of the answer |
   | `--c-orange` | `element-spark-orange.svg` | Ignition, the moment of contact |
 
+- **The burst (`element-rays-burst.svg`) is the PRIMARY brand signature mark.** It carries one ray per pillar, one colour per ray — the five brand colours united in a single form. It is the only element that legitimately uses all five colours at once, because it IS the brand system in one shape. It appears at the top of `logo-with-rays.svg`, as the custom cursor, as the hero floating element, as the S02 punctum figure, as the S07 culminating panel, and as the S03 DNA vision crown logo. Every appearance of the burst should feel like an arrival or a culmination — never a decoration. Never ban this element.
 - **Reserve vocabulary** (use only when their specific meaning is needed): `element-banner-ribbons.svg` (celebration / achievement), `element-squiggle-yellow.svg` (the irregular path — alt for bolt). `element-bolt-yellow-new.svg` and `element-squiggle-yellow.svg` both belong to yellow; pick the one that matches the section's moment.
-- **Banned outright:** `element-rays-burst.svg` (rainbow fan, childish), `element-x-orange.svg` (Misuse section only), `element-arc-purple.svg` (purple is not in the palette), `element-triangle-orange.svg` and `element-spark-blue.svg` (redundant with the locked pairings above).
+- **Banned outright:** `element-x-orange.svg` (Misuse section only), `element-arc-purple.svg` (purple is not in the palette), `element-triangle-orange.svg` and `element-spark-blue.svg` (redundant with the locked pairings above).
 - **The `sys-*` redrawn elements are deprecated** in favor of the originals. They will not appear in any section.
 - **Always render elements as `<img src="assets/element-*.svg">`** — never trace, never recreate. Same rule as the logo: the SVG file is sacred.
 - **No ink/black inside elements.** Elements carry only their assigned brand color.
@@ -64,7 +65,7 @@ The book is composed AROUND that moment, not around the brand name. Every sectio
 - **Differentiated parallax per layer.** Scroll-driven motion at varied speeds: background 0.2–0.4×, midground 0.5–0.7×, foreground 1.0×. Creates depth-of-field illusion without Three.js.
 - **3D micro-rotation on mouse.** Passive layers respond via CSS `perspective` + `rotateX/Y` (max ±4°). Never scale, never spin.
 - **Camera language for narratives.** ScrollTrigger pin + scrub = a "tracking shot" through long sections.
-- **NOT cinematic:** autoplay video, particle systems, Three.js volumetric scenes, lens flares, glow, blur, gradients, hover-bounce micro-interactions, looping decorative spinners.
+- **NOT cinematic:** particle systems, Three.js volumetric scenes, lens flares, glow, blur, gradients, hover-bounce micro-interactions, looping decorative spinners.
 
 ## 3e. SESSION STARTUP — REQUIRED SKILLS
 
@@ -124,11 +125,21 @@ When auto-invoking, state it briefly: "Using `wondelai-web-typography` for the t
 ## 4. ASSETS
 **Logo (never modify):** `assets/logo-wordmark.svg` · `assets/logo-with-tagline.svg` · `assets/logo-with-rays.svg`
 
-**Primary brand element vocabulary** (Raya's original drawings — use these): `assets/element-stairs-green-new.svg`, `assets/element-arrows-pink-new.svg`, `assets/element-bolt-yellow-new.svg`, `assets/element-semicircle-blue.svg`, `assets/element-spark-orange.svg`. Reserve: `element-banner-ribbons.svg`, `element-squiggle-yellow.svg`. Always rendered via `<img>`, never traced. See §3b for color-to-element pairings.
+**Primary brand element vocabulary** (Raya's original drawings — use these): `assets/element-stairs-green-new.svg`, `assets/element-arrows-pink-new.svg`, `assets/element-bolt-yellow-new.svg`, `assets/element-semicircle-blue.svg`, `assets/element-spark-orange.svg`. Reserve: `element-banner-ribbons.svg`, `element-squiggle-yellow.svg`. The burst: `element-rays-burst.svg` (primary brand signature — see §3b). Always rendered via `<img>`, never traced. See §3b for color-to-element pairings.
 
-**Photographic media** (Nano Banana 2 generated, business-grade editorial — Phase 18 / Session 4): `assets/media/s13-01.webp` (open brochure + tea) · `s13-02.webp` (notebook + yellow pencil) · `s13-03.webp` (blank business card) · `s13-04.webp` (letterhead + fountain pen) · `s13-05.webp` (letter alt). Used as CSS `background-image` on `.ap-scene` elements with logo SVG composited as absolute-positioned overlay on the blank paper. Discipline locked: no people, no faces, business-grade still-life only, no cultural-tourism dressing (per the Session-4 panel debate). Future media additions go in `assets/media/` with sequential naming.
+**Business card assets:** `assets/card-front.svg` (Raya's business card front — actual designed SVG), `assets/card-back.svg` (Raya's business card back — actual designed SVG). Used in S13. Not to be modified or regenerated — treat as final brand artifacts.
 
-**Banned:** `element-rays-burst.svg`, `element-arc-purple.svg`, `element-triangle-orange.svg`, `element-spark-blue.svg`. `element-x-orange.svg` only inside the Misuse section.
+**Photographic media — S13 stationery series (Session 4):** `assets/media/s13-01.webp` (open brochure + tea) · `s13-02.webp` (notebook + yellow pencil) · `s13-03.webp` (blank business card) · `s13-04.webp` (letterhead + fountain pen) · `s13-05.webp` (letter alt). Used as CSS `background-image` on `.ap-scene` elements with logo SVG composited as absolute-positioned overlay on the blank paper.
+
+**Nanno illustration series (Session 9):** `assets/media/nanno-student-desk.png` (student at desk — used in S02 + S13) · `nanno-notebook-writing.jpg` (notebook writing photo) · `nanno-boy-window.png` (boy at window) · `nanno-father-son.png` (father and son) · `nanno-parent-girl.png` (parent and girl). Used in S13 nanno illustration band (5-cell row).
+
+**Brand editorial photography (Session 9):** `assets/media/idrak-new-01.jpg` · `idrak-new-02.jpg` · `idrak-new-03.jpg` — three new brand editorial stills. Used as a 3-image triptych in S03 Act 3 (`dso-illus-row`) and as the S13 brand photography triptych band (`ap-photo-band`). 
+
+**Brand video:** `assets/media/nanno-brand-video.mp4` — brand video used as hero background at `opacity: 0.08`, `mix-blend-mode: multiply`. Autoplay, muted, loop.
+
+**Other media:** `assets/media/nanno-elements-system.jpg` — brand elements system diagram.
+
+**Banned:** `element-arc-purple.svg`, `element-triangle-orange.svg`, `element-spark-blue.svg`. `element-x-orange.svg` only inside the Misuse section.
 
 **Deprecated** (do not use — the sterile redraws): `assets/system/sys-*.svg` (entire folder). The originals in `assets/element-*.svg` replace them.
 
@@ -239,25 +250,25 @@ Easing: `cubic-bezier(0.16, 1, 0.3, 1)`. Hover: 4px lift, 0.2s — never scale, 
 
 ## 12. WEB SECTIONS
 
-All 15 sections built. Polish phase active.
+All 15 sections built and deployed. Polish phase active.
 
 | # | Section | Status | Composition |
 |---|---|---|---|
-| 01 | Hero | ✅ DONE | cream + 5 layered brand-`element-*.svg` (dome/stairs/bolt/arrows/spark) + logo SVG protagonist on RTL leading edge + RTL spine + folio + bottom rule |
-| 02 | Brand Story | ✅ DONE (rebuilt) | dropped 500vh scrub; now 100vh two-column REVEAL. LEFT: `element-bolt-yellow-new.svg` (yellow's primary element per §3b) + "اللحظة · The moment" caption. RIGHT: eyebrow + mission headline (Cairo 900 with yellow rule) + 3 flowing beats from §10 + final beat "لا نعيد سرد الدروس.. بل نصنع لحظة إدراك" Consistent chrome + foot rule. No ghost numeral — that pattern was removed for cross-section consistency. |
-| 03 | Brand DNA | ✅ DONE (3 acts + per-pillar differentiation + poster scale — Sessions 5 & 7) | **Act 1 — `.dna-vision` cinematic scene** (100vh pinned, ScrollTrigger pin+scrub 0.7, 140% scroll length). Five vertical brand-colour bars grow from floor (staggered edges-in), five elements appear with Arabic labels (اللحظة · الاندفاع · الطاقة · الوضوح · النمو), converge to centre as logo SVG fades in as unified mark + "خمس قيم — هوية واحدة." Awwwards screen-record beat. **Act 2 — 5 DIFFERENTIATED pillar scenes** (Session 7 upgrade): the "one move repeated 5 times" knock is resolved. Each pillar carries its story through LAYOUT, not just colour. **1. اللحظة (bolt)** — single-column centered, "strike from sky," vertical yellow line dropping through text spine. **2. الاندفاع (spark)** — asymmetric diagonal thrust, name + desc upper-RIGHT (RTL leading), spark lower-LEFT, orange hairline diagonal connector. **3. الطاقة (arrows)** — arrows row top, name centered below, pink rhythm-dash baseline. **4. الوضوح (dome)** — perfectly centered symmetric, dome over name, blue thin ring framing whole stack as halo. **5. النمو (stairs)** — asymmetric, stairs anchored physical-LEFT bottom, name + desc physical-RIGHT, green 5-tick ladder on physical-LEFT margin (= the 5 steps of growth). Per-pillar `.dna-pillar--X` CSS overrides drive everything from same HTML — no markup change. **Act 3 — `.dna-system-overview` Vignelli-grade system poster** (Session 7 upgrade from Phase 19): five horizontal bands (COLOUR / ELEMENT / ICON / TYPE / MOTION). Massive ghost numeral (`clamp(72px, 8vw, 120px)` Lato 300 @ 14% opacity), 88px Cairo 800 Arabic name, tracked Latin caption — each band declares a system primitive with manifesto weight. Plan-agent-derived typography (number 120 / Arabic 88 / Latin 13 / label-col 280px / band-padding 36px). Counter stays `03 / 15`. `?act=N` URL flag (1/2/3) for isolated headless capture |
-| 04 | Two Voices | ✅ DONE | split-column with center hairline — student (pink/arrows) on physical left, parent (blue/dome) on physical right, elements anchored opposite their text, differentiated parallax per column |
-| 05 | Colour System | ✅ DONE | 6 full-bleed scenes (ink + 5 brand colors). Orange scene applies `filter: brightness(0) invert(1)` on the element so the orange spark reads against the orange field (white watermark). Other scenes use the element's native colour |
-| 06 | Typography | ✅ DONE (Session 6 — letterform spread REMOVED) | bilingual specimen spread (Act 1) — Lato column left / Cairo column right divided by hairline, 5 specimen rows. Display specimen capped at `clamp(56px, 6vw, 96px)`. **Phase 19 letterform sub-spread DELETED in Session 6**: claimed "Cairo's إدراك generates the green stair heights" — factually wrong (Cairo is typography, NOT the logo font; the actual logo letterforms live in `logo-wordmark.svg`, not Cairo). Plus it set 5 typeset إ-د-ر-ا-ك letters at `clamp(96px, 13vw, 180px)` = §3 + §13b Rule 2 violation. **NEW LOCKED RULE: Cairo is the brand's TYPOGRAPHY font (body, headlines, content). It is NOT the source of the logo letterforms. Never claim Cairo "generates" the system — the logo SVG is its own custom drawing.** Specimen spread stands alone now. |
-| 07 | Elements | ✅ DONE (Session 6 — icon system rewritten to UI library) | 5-card grid (Act 1, unchanged) — moment / drive / energy / clarity / growth. **Act 2 — Service Icons · UI Library** (Session 6 rebuild). Phase 19's "15 icons derived from element silhouettes" was a designer's puzzle, not a usable icon set. Replaced with **20 icons in 3 functional groups, tied to BUSINESS not brand-shapes**: **SERVICES** (Diagnosis · Personal Plan · Neurofeedback · Play-based · Strategies · Progress · Evaluation · Confidence), **AUDIENCE & CONTACT** (Student · Parents · Phone · Email · Location · Schedule · Teacher · Resources), **UI UTILITY** (Menu · Search · Download · Share · Expand · Close · Settings · Print). Single-stroke 24×24 viewBox, stroke 2u, round caps/joins, bilingual labels per icon (Cairo 600 + Lato 700 tracked). Each group has a header label with brand-colour rule and a group number. Real UI library tuned for the website + future surfaces. Per-icon RISE + per-group stagger via GSAP. **NEW LOCKED RULE: Icons in a brand book serve the BUSINESS (services, audience, UI), not the brand shapes. Element-derived icon families look like a puzzle, not a usable set. Use real UI conventions (Lucide/Phosphor visual grammar) tuned to brand voice.** |
-| 08 | Logo Variations | ✅ DONE | 3-card grid — primary wordmark / with tagline / with rays — RISE motion |
-| 09 | Logo Anatomy | ✅ DONE | restructured. Centered SQUARE `.anat-frame` holds logo + construction grid + anchor dots in ONE coordinate space. Labels positioned OUTSIDE the frame at `calc(100% + 40px)` with leader hairlines — never clip at section edges. Diagonal callout lines removed (they were mis-aligning across non-square stage) |
-| 10 | Clear Space | ✅ DONE | REVEAL diagram + 1x/2x/x legend |
-| 11 | Logo on Backgrounds | ✅ DONE | 7 surfaces + rule card, hairline grid |
-| 12 | Logo Misuse | ✅ DONE | 6-card grid + REVEAL X-mark stamps |
-| 13 | Applications → **Stationery System** | ✅ DONE (rebuilt — Session 6, all 3 logo variants now used) | Photographic encounters from Session 4 were "empty papers with logo pasted" — meaningless mockups. **Session 6 rebuild**: 4 designed flat-style stationery artifacts using all 3 logo variants with discipline. **01 Letterhead (A4 landscape, 16:9)** — `logo-with-tagline.svg` top-left, Arabic body type (recipient + 2 body paras + yellow-rule accent quote "لا نعيد سرد الدروس.. بل نصنع لحظة إدراك" + signature). **02 Business Card · Front (85:55)** — `logo-wordmark.svg` top, name (راية عبد الحي) + role + contact bottom-right, yellow rule on RTL leading edge. **03 Business Card · Back** — yellow takeover, `element-bolt-yellow-new.svg` (ink filter) + tagline "نصنع لحظة إدراك" + English subtitle. **04 Social Post (1:1)** — `logo-with-rays.svg` centered, celebratory message + pink hashtag. Layout: hero letterhead full-width, then 3-column row. NEW LOCKED RULE: every brand book MUST USE every logo variant somewhere — variants without application = wasted assets. Photo-composite path from §13b Rule 14 preserved for future Nano Banana media. |
-| 14 | Motion Demo | ✅ DONE | 4 live CSS loop primitives (REVEAL / RISE / DRAW / LOOP) |
-| 15 | Closing | ✅ DONE (stillness upgrade — Session 4) | Yellow takeover. Mic-drop quote split into **8 word-spans** (`.cl-w`) revealing one-at-a-time (0.55s stagger + blur-removal, ~5s total) — then a deliberate **4-second silence** before English subtitle, signature, and contact band emerge. Villeneuve's patient counter to S03's maximalism. Follows §13b Rule 11: words default-visible in HTML, GSAP `from()` adds entry as decoration only. English subtitle now has `dir="ltr"` (§13b Rule 12) — the trailing period bidi-bug is fixed. The Brand-actor cursor hides over `.cl-quote` so the type carries this beat uninterrupted |
+| 01 | Hero | ✅ DONE | Cream + 5 layered brand-`element-*.svg` (dome/stairs/bolt/arrows/spark) + `logo-with-rays.svg` protagonist on RTL leading edge + RTL spine + folio + bottom rule. Hero floating element is `element-rays-burst.svg`. Brand video (`nanno-brand-video.mp4`) as background at 0.08 opacity, `mix-blend-mode: multiply`. |
+| 02 | Brand Story | ✅ DONE (rebuilt) | Dropped 500vh scrub; now 100vh two-column REVEAL. LEFT: `element-rays-burst.svg` as S02 punctum figure + "اللحظة · The moment" caption. RIGHT: eyebrow + mission headline (Cairo 900 with yellow rule) + 3 flowing beats from §10 + final beat "لا نعيد سرد الدروس.. بل نصنع لحظة إدراك." Consistent chrome + foot rule. |
+| 03 | Brand DNA | ✅ DONE (3 acts + per-pillar differentiation + editorial system overview) | **Act 1 — `.dna-vision` cinematic scene** (100vh pinned, ScrollTrigger pin+scrub 0.7, 140% scroll length). Five vertical brand-colour bars grow from floor (staggered edges-in), five elements appear with Arabic labels (اللحظة · الاندفاع · الطاقة · الوضوح · النمو), converge to centre as `element-rays-burst.svg` fades in as unified crown mark + "خمس قيم — هوية واحدة." **Act 2 — 5 DIFFERENTIATED pillar scenes**: each pillar carries its story through LAYOUT, not just colour (see §13b Rule 17). **Act 3 — `.dna-system-overview` Vignelli-style index**: five horizontal bands (COLOUR / ELEMENT / ICON / TYPE / MOTION). Band label is editorial-counter style: **band number at 10px / letter-spacing 3px / opacity 0.4** (quiet Vignelli index counter, not a display-type poster). Arabic band name at `clamp(28px, 3vw, 40px)`. Label column is 200px. Act 3 bottom uses a 3-image triptych grid (`idrak-new-01.jpg`, `idrak-new-02.jpg`, `idrak-new-03.jpg`). Chrome reads `Brand DNA · The System · Index` (separator present). Counter stays `03 / 15`. `?act=N` URL flag (1/2/3) for isolated headless capture. |
+| 04 | Two Voices | ✅ DONE | Split-column with center hairline — student (pink/arrows) on physical left, parent (blue/dome) on physical right, elements anchored opposite their text, differentiated parallax per column. |
+| 05 | Colour System | ✅ DONE | 6 full-bleed scenes (ink + 5 brand colors). Orange scene applies `filter: brightness(0) invert(1)` on the element so the orange spark reads against the orange field (white watermark). Other scenes use the element's native colour. |
+| 06 | Typography | ✅ DONE (Session 6 — letterform spread REMOVED) | Bilingual specimen spread (Act 1) — Lato column left / Cairo column right divided by hairline, 5 specimen rows. Display specimen capped at `clamp(56px, 6vw, 96px)`. **Phase 19 letterform sub-spread DELETED in Session 6**: claimed "Cairo's إدراك generates the green stair heights" — factually wrong (Cairo is typography, NOT the logo font; the actual logo letterforms live in `logo-wordmark.svg`, not Cairo). Plus it set 5 typeset إ-د-ر-ا-ك letters at `clamp(96px, 13vw, 180px)` = §3 + §13b Rule 2 violation. **NEW LOCKED RULE: Cairo is the brand's TYPOGRAPHY font (body, headlines, content). It is NOT the source of the logo letterforms. Never claim Cairo "generates" the system — the logo SVG is its own custom drawing.** Specimen spread stands alone now. |
+| 07 | Elements | ✅ DONE | **Act 1 — 5-card grid**: moment / drive / energy / clarity / growth. **Act 2 — Service Icons · UI Library** (Session 6): 20 icons in 3 functional groups tied to BUSINESS not brand-shapes. Single-stroke 24×24 viewBox, stroke 2u, round caps/joins, bilingual labels. **`elements-master` burst/signature block** (the unifying burst panel) is at the END of S07 — after the icon library, before the footer. It reads as a culmination: 5 elements → icons → the unifying burst. This placement is intentional and locked. |
+| 08 | Logo Variations | ✅ DONE | 3-card grid — primary wordmark / with tagline / with rays — RISE motion. |
+| 09 | Logo Anatomy | ✅ DONE | Restructured. Centered SQUARE `.anat-frame` holds logo + construction grid + anchor dots in ONE coordinate space. Labels positioned OUTSIDE the frame at `calc(100% + 40px)` with leader hairlines — never clip at section edges. Diagonal callout lines removed. |
+| 10 | Clear Space | ✅ DONE | REVEAL diagram + 1x/2x/x legend. |
+| 11 | Logo on Backgrounds | ✅ DONE | 7 surfaces + rule card, hairline grid. |
+| 12 | Logo Misuse | ✅ DONE | 6-card grid + REVEAL X-mark stamps. |
+| 13 | Applications | ✅ DONE (Session 9 rebuild) | **Business cards**: actual SVG files — `assets/card-front.svg` (front) and `assets/card-back.svg` (back). Raya's designed card, not a CSS mockup. **Nanno illustration band** (5-cell row): `nanno-student-desk.png`, `nanno-notebook-writing.jpg`, `nanno-boy-window.png`, `nanno-father-son.png`, `nanno-parent-girl.png`. **Brand photography triptych band** (`ap-photo-band`): 3-column asymmetric grid (1 / 1.6 / 1) using `idrak-new-01.jpg`, `idrak-new-02.jpg`, `idrak-new-03.jpg` with dark gradient overlay and LTR labels. |
+| 14 | Motion Demo | ✅ DONE | 4 live CSS loop primitives (REVEAL / RISE / DRAW / LOOP). |
+| 15 | Closing | ✅ DONE | Yellow takeover. Mic-drop quote (`.cl-quote`) split into word-spans revealing one-at-a-time (0.55s stagger + blur-removal, ~5s total) then 4-second silence before English subtitle, signature, and contact band. **Arabic `cl-quote` line-height is `1.15`** (was 0.95 — too tight, lines collided). **Ezo Studio credit** (`.cl-studio`) at the very bottom: `Brand identity work by · EZO STUDIO · 2026` — 10px / 3px letter-spacing / uppercase / centered / 55% opacity. |
 
 ## 13. RECURRING PATTERNS — implementation discipline
 
@@ -271,7 +282,7 @@ All 15 sections built. Polish phase active.
 - **Display type sizing inside narrow columns.** `clamp(min, vw-based, max)` uses VIEWPORT width, not column width. In a 2-column spread, viewport-based display sizing overflows the column. Cap aggressively (e.g. `clamp(56px, 6vw, 96px)` for display in a half-viewport column) and add `overflow-wrap: break-word` as safety.
 - **Screenshot mode bypass.** `?screenshot=true` URL param skips all GSAP and sets static "final state" inline styles. Required because Chrome headless doesn't complete RAF timelines reliably. Every section's animations must have a corresponding screenshot-mode static state.
 - **Programmatic scroll for headless screenshots.** `?scrollTo=N` URL param scrolls window to pixel N after load. Use with `--window-size=1440,900` to capture a specific section (e.g. `?screenshot=true&scrollTo=1800` for the third section). Note: Chrome's `--virtual-time-budget` may not always let the deferred scroll fire — for reliable verification use the live preview panel instead.
-- **Chrome consistency across sections.** Every section uses the same chrome pattern: `<header>` with two spans — left: `<b>NN · English Title</b><span class="*-chrome-title-ar">العربية</span>`; right: `<span dir="ltr">NN / 15</span>`. Section number always ink bold, Arabic in Cairo medium 13px, counter always LTR. No section-specific ghost numerals, no decorative variations — chrome is system furniture, not section art. Implementation: one global override CSS block at the END of `<style>` that targets every per-section chrome class with a canonical typography + spacing rule. Don't refactor each section's HTML — override their CSS variants in one place.
+- **Chrome consistency across sections.** Every section uses the same chrome pattern: `<header>` with two spans — left: `<b>· English Title</b><span class="*-chrome-title-ar">العربية</span>`; right: `<span dir="ltr">NN / 15</span>`. Section number always ink bold, Arabic in Cairo medium 13px, counter always LTR. No section-specific ghost numerals, no decorative variations — chrome is system furniture, not section art. Implementation: one global override CSS block at the END of `<style>` that targets every per-section chrome class with a canonical typography + spacing rule. Don't refactor each section's HTML — override their CSS variants in one place. **Section titles do NOT carry an `NN` numeric prefix** — the chrome separator (`·`) is enough.
 
 ## 13b. OPTIMIZATION RULES — lessons learned (LOCKED)
 
@@ -374,7 +385,7 @@ When mocking up branded artifacts (cards, letterheads, brochures) **never typese
 
 ### 15. Generated media discipline (LOCKED — Session 4)
 - **Format:** Nano Banana 2 outputs `image/webp` natively. Don't fight it — keep `.webp` in `assets/media/` and reference `.webp` in HTML. WebP is smaller than JPG and universally supported in modern browsers.
-- **People:** banned. The brand panel debated this — people-in-photos add one more category of AI failure (faces, hands, expressions). Still-life only. Notebook + pencil > student at desk.
+- **People:** banned for D1 still-life series. The brand panel debated this — people-in-photos add one more category of AI failure (faces, hands, expressions). Still-life only for stationery. Notebook + pencil > student at desk.
 - **Cultural-tourism dressing:** BANNED across all series (photo, illustration, video, social). The brand language is Arabic because the audience reads Arabic, not because the brand is "Arab-themed." Banned visual cues: hijab, thobe, traditional dress, calligraphy on walls, Arabic-mosaic patterns, religious framing, geographic markers (Tira/Palestine/Levantine props), "Arabic coffee" scenes, kitchen-warmth tropes. Generic premium global editorial — like Apple's education ads, where Arabic appears as language not as setting. **The brand serves any kid struggling with learning, anywhere — universal-young-person register.** The user has locked this twice now (Session 4 + Session 8). DO NOT ask "should we add hijab/cultural elements?" in any future session — the answer is permanently no.
 - **Six-eight photo budget per section.** Erik's discipline level. Each photo must be prompt-engineered like a production still (specific lighting, lens, color palette in the prompt). No "moody background AI" wallpaper.
 
@@ -425,6 +436,16 @@ Mobile-responsive pass for this codebase = ONE new `@media (max-width: 600px)` b
 6. **Verification cadence:** capture per-section at 375 (`?screenshot=true&only=sNN`, `--window-size=375,900`), not full-doc 14000px tall — detail compresses too far in the stacked view to spot real breaks.
 
 Reference implementation: `index.html` lines ~4877–5170 (the `@media (max-width: 600px)` block).
+
+### 21. Act 3 DSO band labels — editorial counter, not display type (Session 9 — LOCKED)
+The S03 system overview (`.dna-system-overview`) band labels are an editorial index, not a typographic poster. The bug that was fixed in Session 9 was enormous ghost numerals and massive Arabic names that overflowed the label column and broke the index grid.
+
+**Correct (locked) state:**
+- Band number: `10px` / `letter-spacing: 3px` / `opacity: 0.4` — a quiet editorial counter
+- Arabic band name: `clamp(28px, 3vw, 40px)` — headline scale, not display
+- Label column width: `200px`
+
+**Banned (was the bug):** `clamp(72px, 8vw, 120px)` ghost numerals at 14% opacity, `88px` Cairo 800 Arabic declarations, `280px` label column. Those numbers destroyed the index grid. Do not restore them.
 
 ## 13c. HEADLESS SCREENSHOT TOOLKIT — working approach
 
@@ -508,3 +529,12 @@ From §10 — these strings appear multiple times and are the brand's spine. Do 
 - The four S02 brand-story beats (Arabic only)
 
 The English equivalents CAN be rewritten — but they must preserve the meaning of these locked Arabic phrases. The copywriter has been briefed on this in `COPY.md`.
+
+## 14. DEPLOYMENT
+
+- **GitHub repository:** `https://github.com/ezosamara/idrak-brand-system`
+- **Live URL:** `https://idrak-brand-system.vercel.app`
+- **Deploy trigger:** auto-deploys on every push to the `master` branch via Vercel.
+- **`.gitignore` excludes:** `node_modules/`, `.cache/`, `screenshots/`, `screenshot-*.png`, `.claude/`, `qa/`, `incoming/`, `.vercel`
+- To deploy: commit changes to `index.html` (and any assets) and push to `master`. Vercel picks up the push automatically — no manual deploy step required.
+- Always verify the live URL after a deploy to confirm the Vercel build succeeded.
