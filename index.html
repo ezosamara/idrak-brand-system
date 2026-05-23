@@ -5238,6 +5238,7 @@
       /* === 1. Section base padding tightens === */
       section[id] {
         padding-inline: clamp(20px, 5vw, 32px);
+        padding-block: clamp(40px, 8vh, 64px);
       }
 
       /* === 2. Chrome stacks 2 lines on phone (counter / title) ===
@@ -5276,13 +5277,11 @@
       }
 
       /* === 3. Display headlines cap (Arabic display type) === */
-      .st-headline-ar,
       .bg-headline-ar,
       .ms-headline-ar,
       .ap-headline-ar,
       .anat-headline-ar,
       .cs-headline-ar,
-      .mo-headline-ar,
       .voices-title-ar {
         font-size: clamp(28px, 8vw, 44px) !important;
         line-height: 1.2 !important;
@@ -5306,13 +5305,13 @@
       .bg-grid,
       .ap-row-secondary,
       .ap-row-artifacts,
-      .voices-split,
-      .mo-grid,
       .cl-contact {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
       }
-      .voices-split { grid-template-columns: 1fr !important; }
+      /* S13 Nanno bands — 5-col/3-col collapse to 2-col/1-col */
+      .ap-illus-band { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+      .ap-photo-band { grid-template-columns: 1fr !important; }
       .voices-divider { display: none !important; }
       .ui-group-row {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -5397,6 +5396,7 @@
       .dna-pillar .dna-stage {
         grid-column: 1 !important;
         grid-row: 1 !important;
+        height: auto !important;
         min-height: 140px;
       }
       .dna-pillar .dna-text {
@@ -5428,11 +5428,21 @@
       }
 
       /* DNA vision Act 1 — keep but compress */
+      .dna-vision .vc { width: 52px !important; }
       .dna-vision .vc-bar { width: 6px !important; }
       .dna-vision .vc-el img { width: 80px !important; }
+      /* DNA pillar chrome uses <div> not <header> — needs explicit mobile rule */
+      .dna-chrome {
+        left: 20px !important;
+        right: 20px !important;
+        flex-wrap: wrap !important;
+        font-size: 8px !important;
+        letter-spacing: 2px !important;
+        gap: 4px 8px !important;
+      }
 
       /* === 7. S04 Two Voices stack === */
-      .voices-split { gap: 32px !important; }
+      .voices-split { grid-template-columns: 1fr !important; gap: 32px !important; }
       .voice-col {
         padding: 32px 20px !important;
         min-height: auto !important;
@@ -5467,7 +5477,6 @@
       .type-col {
         padding: 24px !important;
       }
-      .type-spec { font-size: clamp(20px, 7vw, 32px) !important; }
 
       /* === 10. S07 Elements + Icons === */
       .element-card {
@@ -5560,12 +5569,7 @@
       /* S13 head — Latin paragraph "Four artifacts..." needs dir-ltr */
       .ap-headline-en { font-size: 12px !important; line-height: 1.55 !important; }
 
-      /* === 17. S14 Motion demos === */
-      .mo-grid { grid-template-columns: 1fr !important; }
-      .mo-card { padding: 24px !important; min-height: 240px !important; }
-      .mo-stage { padding: 24px !important; }
-
-      /* === 18. S15 Closing === */
+      /* === 17. S15 Closing === */
       .cl-quote { font-size: clamp(28px, 9vw, 44px) !important; line-height: 1.35 !important; }
       .cl-subtitle { font-size: 13px !important; }
       .cl-signature { font-size: 12px !important; }
@@ -5655,6 +5659,8 @@
       .cs-headline-ar,
       .anat-headline-ar,
       .ap-headline-ar,
+      .bg-headline-ar,
+      .ms-headline-ar,
       .st-headline,
       .cl-quote {
         overflow-wrap: break-word !important;
@@ -7963,7 +7969,7 @@
        Pin + scrub gives the audience a "tracking shot through the brand birth." */
     {
       const vSection = document.getElementById('dnaVision');
-      if (vSection) {
+      if (vSection && window.innerWidth > 600) {
         const bars  = vSection.querySelectorAll('.vc-bar');
         const els   = vSection.querySelectorAll('.vc-el');
         const labs  = vSection.querySelectorAll('.vc-lab');
