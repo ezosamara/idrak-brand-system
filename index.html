@@ -3,7 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>إدراك — دليل الهوية</title>
+  <title>إدراك — دليل الهوية البصرية</title>
+  <meta name="description" content="دليل الهوية البصرية الكامل لمركز إدراك للتعلّم الذكي — هوية مرئية صُنعت للتميّز والتأثير.">
+
+  <!-- OpenGraph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://idrak-brand-system.vercel.app">
+  <meta property="og:title"       content="إدراك — دليل الهوية البصرية">
+  <meta property="og:description" content="دليل الهوية البصرية الكامل لمركز إدراك للتعلّم الذكي — هوية مرئية صُنعت للتميّز والتأثير.">
+  <meta property="og:image"       content="https://idrak-brand-system.vercel.app/assets/logo-with-rays.png">
+  <meta property="og:locale"      content="ar_SA">
+  <meta property="og:site_name"   content="إدراك Brand System">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="إدراك — دليل الهوية البصرية">
+  <meta name="twitter:description" content="دليل الهوية البصرية الكامل لمركز إدراك للتعلّم الذكي.">
+  <meta name="twitter:image"       content="https://idrak-brand-system.vercel.app/assets/logo-with-rays.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -588,6 +604,14 @@
     }
     .st-foot b { color: var(--c-ink); font-weight: 700; margin-inline-end: 12px; }
     .st-foot-warn { color: var(--c-yellow); font-weight: 700; }
+    /* Arabic tagline span — must NOT inherit letter-spacing or text-transform from .st-foot */
+    .st-foot > span:first-child {
+      letter-spacing: 0;
+      font-family: 'Cairo', sans-serif;
+      text-transform: none;
+      direction: rtl;
+      unicode-bidi: isolate;
+    }
 
     @media (max-width: 900px) {
       .st-grid { grid-template-columns: 1fr; }
@@ -5395,7 +5419,25 @@
       .voice-col {
         padding: 32px 20px !important;
         min-height: auto !important;
+        overflow: hidden !important;
       }
+      /* Shrink title so it doesn't overflow the column width */
+      .voice-name-ar {
+        font-size: clamp(40px, 11vw, 52px) !important;
+      }
+      /* Pull illus out of absolute positioning — let it sit above the text stack */
+      .voice-illus {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 72px !important;
+        margin-block-end: 8px !important;
+      }
+      .voice-col--student .voice-illus { align-self: flex-end !important; }
+      .voice-col--parent  .voice-illus { align-self: flex-start !important; }
+      /* Brand elements bleed out of bounds at 375px — hide on mobile */
+      .voice-element { display: none !important; }
 
       /* === 8. S05 Colour scenes === */
       .colour-scene {
@@ -5613,16 +5655,28 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 9100;
-      height: 52px;
-      background: rgba(250,248,243,0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      height: 56px;
+      background: rgba(250,248,243,0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--c-line);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 40px;
       font-family: 'Lato', sans-serif;
+    }
+    /* Yellow accent mark — brand anchor on the left edge */
+    .top-nav::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 28px;
+      background: var(--c-yellow);
+      border-radius: 0 2px 2px 0;
     }
     .top-nav-brand {
       display: flex;
@@ -5656,21 +5710,25 @@
       background: none;
       border: none;
       cursor: pointer;
-      padding: 6px;
+      padding: 8px 10px;
       display: flex;
       flex-direction: column;
       gap: 5px;
       align-items: flex-end;
+      border-radius: 6px;
+      transition: background 0.2s;
     }
+    .top-nav-toggle:hover { background: var(--c-line); }
     .top-nav-toggle span {
       display: block;
-      height: 1.5px;
+      height: 2px;
       background: var(--c-ink);
+      border-radius: 2px;
       transition: width 0.3s, opacity 0.3s, transform 0.3s;
     }
-    .top-nav-toggle span:nth-child(1) { width: 22px; }
-    .top-nav-toggle span:nth-child(2) { width: 14px; }
-    .top-nav-toggle span:nth-child(3) { width: 22px; }
+    .top-nav-toggle span:nth-child(1) { width: 24px; }
+    .top-nav-toggle span:nth-child(2) { width: 16px; background: var(--c-yellow); }
+    .top-nav-toggle span:nth-child(3) { width: 24px; }
     .top-nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); width: 22px; }
     .top-nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
     .top-nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); width: 22px; }
@@ -5678,17 +5736,20 @@
     /* Full-screen nav panel */
     .top-nav-panel {
       position: fixed;
-      top: 52px; left: 0; right: 0;
-      background: var(--c-bg);
+      top: 56px; left: 0; right: 0;
+      background: rgba(250,248,243,0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--c-line);
-      padding: 40px;
+      box-shadow: 0 24px 64px rgba(13,13,13,0.10);
+      padding: 32px 40px 40px;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 2px;
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.25s, transform 0.25s;
+      transition: opacity 0.22s, transform 0.22s;
       z-index: 9050;
     }
     .top-nav-panel.is-open {
@@ -5699,43 +5760,65 @@
     .top-nav-section-link {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
       padding: 16px 20px;
       text-decoration: none;
       border: 1px solid transparent;
+      border-radius: 4px;
       transition: border-color 0.2s, background 0.2s;
     }
-    .top-nav-section-link:hover { border-color: var(--c-line); }
-    .top-nav-section-link.is-active { border-color: var(--c-ink); }
+    .top-nav-section-link:hover {
+      border-color: var(--c-line);
+      background: rgba(13,13,13,0.03);
+    }
+    .top-nav-section-link.is-active {
+      border-color: var(--c-ink);
+      background: rgba(13,13,13,0.04);
+    }
+    .top-nav-section-link.is-active .top-nav-section-num {
+      color: var(--c-yellow);
+    }
     .top-nav-section-num {
       font-size: 10px;
+      font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--c-text-soft);
+      transition: color 0.2s;
     }
     .top-nav-section-name {
-      font-size: 13px;
-      letter-spacing: 1px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--c-ink);
       font-weight: 700;
+      line-height: 1.3;
     }
     .top-nav-section-ar {
       font-family: 'Cairo', sans-serif;
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 13px;
+      font-weight: 500;
       letter-spacing: 0;
       color: var(--c-text-soft);
       text-align: right;
+      direction: rtl;
     }
     /* Push sections below the fixed nav */
-    body { padding-top: 52px; }
+    body { padding-top: 56px; }
     @media (max-width: 600px) {
-      .top-nav { padding: 0 20px; height: 48px; }
+      .top-nav { padding: 0 20px; height: 52px; }
       .top-nav-subtitle { display: none; }
       .top-nav-current { display: none; }
-      .top-nav-panel { grid-template-columns: repeat(2, 1fr); padding: 20px; top: 48px; }
-      body { padding-top: 48px; }
+      .top-nav-panel {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 16px 16px 24px;
+        top: 52px;
+        gap: 4px;
+      }
+      .top-nav-section-link { padding: 12px 14px; gap: 4px; }
+      .top-nav-section-name { font-size: 10px; letter-spacing: 1px; }
+      .top-nav-section-ar { font-size: 11px; }
+      body { padding-top: 52px; }
     }
 
     /* ══════════════════════════════════════════
