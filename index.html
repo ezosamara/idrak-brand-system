@@ -613,6 +613,23 @@
       unicode-bidi: isolate;
     }
 
+    /* ── GLOBAL: all section footer spans that contain Arabic text ──────────
+       Every -foot container sets letter-spacing:4px + text-transform:uppercase.
+       Arabic ligatures break when letter-spacing is non-zero. Reset here.      */
+    .voices-foot  > span:last-child,
+    .elements-foot > span:last-child,
+    .logo-var-foot-warn,
+    .anat-foot-warn,
+    .cs-foot-warn,
+    .bg-foot-warn,
+    .ms-foot-warn,
+    .ap-foot-warn,
+    .cl-foot > span:first-child,
+    .cl-foot-end {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
     @media (max-width: 900px) {
       .st-grid { grid-template-columns: 1fr; }
       .st-punctum { padding-bottom: 32px; }
@@ -1752,20 +1769,20 @@
     /* D2 illustration — upper corner, always above the brand element */
     .voice-illus {
       position: absolute;
-      top: 52px;
+      top: 40px;
       pointer-events: none;
       z-index: 4;
-      width: 168px;
+      width: 210px;
       margin: 0;
       padding: 0;
     }
     /* Student illustration sits on the RIGHT side (opposite the left-aligned text) */
     .voice-col--student .voice-illus {
-      right: 48px;
+      right: 40px;
     }
     /* Parent illustration sits on the LEFT side (opposite the right-aligned text) */
     .voice-col--parent .voice-illus {
-      left: 48px;
+      left: 40px;
     }
     .voice-illus img {
       width: 100%;
