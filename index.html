@@ -1290,9 +1290,9 @@
     }
     .dso-band {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 200px 1fr;
       align-items: stretch;
-      padding-block: 36px;
+      padding-block: 32px;
       border-block-start: 1px solid rgba(13, 13, 13, 0.10);
       direction: rtl;
       will-change: opacity, transform;
@@ -1303,36 +1303,36 @@
     .dso-band-label {
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      padding-inline-end: 24px;
+      gap: 6px;
+      padding-inline-end: 28px;
       justify-content: center;
     }
     .dso-band-no {
       font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      font-size: clamp(72px, 8vw, 120px);
-      line-height: 0.9;
-      letter-spacing: -0.04em;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 3px;
       color: var(--c-ink);
-      opacity: 0.14;
+      opacity: 0.4;
       direction: ltr;
-      font-variant-numeric: tabular-nums;
+      text-transform: uppercase;
     }
     .dso-band-name-ar {
       font-family: 'Cairo', sans-serif;
       font-weight: 800;
-      font-size: clamp(48px, 5.4vw, 88px);
-      line-height: 0.95;
-      letter-spacing: -0.02em;
+      font-size: clamp(28px, 3vw, 40px);
+      line-height: 1;
+      letter-spacing: -0.01em;
       color: var(--c-ink);
-      margin: 6px 0 0;
+      margin: 0;
       unicode-bidi: isolate;
     }
     .dso-band-name-en {
       font-family: 'Lato', sans-serif;
       font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 5.4px;
+      font-size: 10px;
+      letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--c-text-soft);
       direction: ltr;
@@ -1611,7 +1611,7 @@
       direction: rtl;
     }
     @media (max-width: 1024px) {
-      .dso-band { grid-template-columns: 120px 1fr; }
+      .dso-band { grid-template-columns: 160px 1fr; }
       .dso-icon-mini { width: 22px; height: 22px; }
     }
 
@@ -5249,8 +5249,7 @@
       .anat-headline-ar,
       .cs-headline-ar,
       .mo-headline-ar,
-      .voices-title-ar,
-      .dso-band-name-ar {
+      .voices-title-ar {
         font-size: clamp(28px, 8vw, 44px) !important;
         line-height: 1.2 !important;
         overflow-wrap: break-word;
@@ -5379,19 +5378,19 @@
 
       /* DNA system overview poster scales for phone */
       .dso-band {
-        grid-template-columns: 56px 1fr !important;
-        padding-block: 18px !important;
-        gap: 14px !important;
+        grid-template-columns: 80px 1fr !important;
+        padding-block: 20px !important;
+        gap: 12px !important;
       }
       .dso-band-no {
-        font-size: 36px !important;
+        font-size: 9px !important;
       }
       .dso-band-name-ar {
-        font-size: 28px !important;
+        font-size: 20px !important;
       }
       .dso-band-name-en {
-        font-size: 10px !important;
-        letter-spacing: 2.5px !important;
+        font-size: 8px !important;
+        letter-spacing: 2px !important;
       }
 
       /* DNA vision Act 1 — keep but compress */
